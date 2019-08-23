@@ -39,4 +39,6 @@ cqc_get_data <- function(query, verbose, type, clean_names) {
     names(df) <- snakecase::to_snake_case(names(df))
   }
 
+  df
+
 }
