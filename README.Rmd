@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-Get data from the care quality commission.
+Get data from the Care Wuality Commission [API](https://anypoint.mulesoft.com/exchange/portals/care-quality-commission-5/4d36bd23-127d-4acf-8903-ba292ea615d4/cqc-syndication-1/)
 
 ## Installation
 

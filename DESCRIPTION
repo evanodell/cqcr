@@ -1,23 +1,21 @@
 Package: cqcr
-Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Evan",
+           family = "Odell",
+           role = c("aut", "cre"),
+           email = "evanodell91@gmail.com",
+           comment = c(ORCID = "0000-0003-1845-808X"))
+Description: What the package does (one paragraph).
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    httr,
     dplyr,
-    rlang,
-    anytime,
+    httr,
     jsonlite,
+    anytime,
     snakecase
-Suggests: 
-    testthat (>= 2.1.0),
-    tibble,
-    covr
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1

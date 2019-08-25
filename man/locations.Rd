@@ -16,8 +16,8 @@ cqc_locations(care_home = NULL, onspd_ccg_code = NULL,
   verbose = TRUE, clean_names = TRUE)
 }
 \arguments{
-\item{care_home}{If `TRUE`, only returns care homes. If `FALSE`, returns
-all locations except care homes. Defaults to `NULL` and returns all
+\item{care_home}{If \code{TRUE}, only returns care homes. If \code{FALSE}, returns
+all locations except care homes. Defaults to \code{NULL} and returns all
 locations including care homes.}
 
 \item{onspd_ccg_code}{Include only locations where the ONSPD CCG code
@@ -30,7 +30,7 @@ values of this parameter.}
 
 \item{ods_ccg_code}{Include only locations where the ODS code of the CCG
 selected by this organisation is known and matches one of the values of
- this parameter.}
+this parameter.}
 
 \item{ods_ccg_name}{Include only locations where the ODS name of the CCG
 selected by this organisation is known and matches one of the values of
@@ -70,11 +70,11 @@ category name. e.g. "Slimming Clinics"}
 \item{report_type}{The type of report, e.g. "Location", "Provider"
 or "CoreService"}
 
-\item{verbose}{If `TRUE` prints download progress to console if requesting
-more than 1,000 records.  Defaults to `TRUE`.}
+\item{verbose}{If \code{TRUE} prints download progress to console if requesting
+more than 1,000 records.  Defaults to \code{TRUE}.}
 
-\item{clean_names}{If `TRUE`, converts a column names to snake_case.
-Defaults to `TRUE`.}
+\item{clean_names}{If \code{TRUE}, converts a column names to snake_case.
+Defaults to \code{TRUE}.}
 }
 \value{
 A tibble with the location ID, name and postcode of all locations
@@ -82,11 +82,9 @@ meeting the given parameters.
 }
 \description{
 Returns all available locations, subject to given parameters.
-See the [official documentation](https://anypoint.mulesoft.com/exchange/portals/care-quality-commission-5/4d36bd23-127d-4acf-8903-ba292ea615d4/cqc-syndication-1/1.0.37/console/method/%23196/)
-for more details.
 }
 \details{
-All parameters except `care_home`, `verbose` and `clean_names`
+All parameters except \code{care_home}, \code{verbose} and \code{clean_names}
 accept an array of values, and will return locations matching any of the
 values of those arrays, subject to other parameters. Search parameters are
 case sensitive, e.g. "hospitals"

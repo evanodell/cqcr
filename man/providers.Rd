@@ -44,20 +44,18 @@ category name. e.g. "Slimming Clinics"}
 \item{report_type}{The type of report, e.g. "Location", "Provider"
 or "CoreService"}
 
-\item{verbose}{If `TRUE` prints download progress to console if requesting
-more than 1,000 records.  Defaults to `TRUE`.}
+\item{verbose}{If \code{TRUE} prints download progress to console if requesting
+more than 1,000 records.  Defaults to \code{TRUE}.}
 
-\item{clean_names}{If `TRUE`, converts a column names to snake_case.
-Defaults to `TRUE`.}
+\item{clean_names}{If \code{TRUE}, converts a column names to snake_case.
+Defaults to \code{TRUE}.}
 }
 \value{
 A tibble with the provider ID, name and postcode of all providers
 meeting the given parameters.
 }
 \description{
-Retrieve CQC providers, subject to given parameters. See the
-[full documentation](https://anypoint.mulesoft.com/exchange/portals/care-quality-commission-5/4d36bd23-127d-4acf-8903-ba292ea615d4/cqc-syndication-1/1.0.37/console/method/%23908/)
-for more details.
+Retrieve CQC providers, subject to given parameters.
 }
 \examples{
 \donttest{

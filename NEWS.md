@@ -5,5 +5,4 @@
 
 to do:  
 
-2. sort out queries
-3. name cleaning
+1. Reports

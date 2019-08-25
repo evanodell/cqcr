@@ -2,6 +2,19 @@
 
 ## Not working
 
+#' Title
+#'
+#' @param inspection_report_link_id
+#' @param related_document_type
+#' @param plain_text
+#' @param verbose
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#'
+
 cqc_reports <- function (inspection_report_link_id,
                          related_document_type = NULL,
                          plain_text = TRUE, verbose = TRUE) {

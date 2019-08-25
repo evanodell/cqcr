@@ -7,14 +7,12 @@
 cqc_inspection_areas(clean_names = TRUE)
 }
 \arguments{
-\item{clean_names}{If `TRUE`, converts a column names to snake_case.
-Defaults to `TRUE`.}
+\item{clean_names}{If \code{TRUE}, converts a column names to snake_case.
+Defaults to \code{TRUE}.}
 }
 \value{
 A tibble with inspection areas.
 }
 \description{
-Retrieves all CQC inspection areas. See the
-[full documentation](https://anypoint.mulesoft.com/exchange/portals/care-quality-commission-5/4d36bd23-127d-4acf-8903-ba292ea615d4/cqc-syndication-1/1.0.37/console/endpoint/%231646/)
-for more details.
+Retrieves all CQC inspection areas.
 }

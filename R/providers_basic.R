@@ -1,8 +1,3 @@
-## simple provider endpoint queries
-
-
-# Single provider
-
 
 #' Individual providers
 #'

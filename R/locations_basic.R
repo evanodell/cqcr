@@ -7,7 +7,6 @@
 #' @return A list with information on the given location
 #' @rdname indlocations
 #' @export
-# Individual locations
 cqc_location <- function(location_id, verbose = TRUE, clean_names = TRUE) {
 
   query <- paste0("locations/", location_id)

@@ -1,10 +1,7 @@
 
 #' CQC Providers
 #'
-#' Retrieve CQC providers, subject to given parameters. See the
-#' [full documentation](https://anypoint.mulesoft.com/exchange/portals/care-quality-commission-5/4d36bd23-127d-4acf-8903-ba292ea615d4/cqc-syndication-1/1.0.37/console/method/%23908/)
-#' for more details.
-#'
+#' Retrieve CQC providers, subject to given parameters.
 #'
 #' @inheritParams cqc_locations
 #'

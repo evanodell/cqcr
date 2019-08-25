@@ -1,26 +1,8 @@
 
 
-# Retrieve a list of locations. Locations are sites where a Provider operates. Query parameters may be added to the URL which are filters so that the response will only include organisations with attributes matching the required value(s). The available filters are listed in the "Query parameters" section below. If the same query parameter is repeated in the URL with different values organisations will be returned which match any of the values. If there are combinations of different query parameters, e.g. region and overallRating, then organisations which match both sets of values are returned. For example, /locations?region=London&region=South%20west&overallRating=Outstanding will return organisations which have a current "Outstanding" overall rating and which have a region of "London" or "South west".
-
-
-# careHome, onspdCcgCode, onspdCcgName, odsCcgCode,
-# odsCcgName, gacServiceTypeDescription, constituency,
-# localAuthority, inspectionDirectorate,
-# nonPrimaryInspectionCategoryCode,
-# nonPrimaryInspectionCategoryName,
-# primaryInspectionCategoryCode,
-# primaryInspectionCategoryName, overallRating, region,
-# regulatedActivity, reportType
-
-#https://anypoint.mulesoft.com/exchange/portals/care-quality-commission-5/4d36bd23-127d-4acf-8903-ba292ea615d4/cqc-syndication-1/1.0.37/console/method/%23196/
-
-
-
 #' Location Queries
 #'
 #' Returns all available locations, subject to given parameters.
-#' See the [official documentation](https://anypoint.mulesoft.com/exchange/portals/care-quality-commission-5/4d36bd23-127d-4acf-8903-ba292ea615d4/cqc-syndication-1/1.0.37/console/method/%23196/)
-#' for more details.
 #'
 #' @details All parameters except `care_home`, `verbose` and `clean_names`
 #' accept an array of values, and will return locations matching any of the
