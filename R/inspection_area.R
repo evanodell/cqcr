@@ -7,8 +7,7 @@
 #' @return A tibble with inspection areas.
 #' @export
 
-cqc_inspection_areas <- function (clean_names = TRUE) {
-
+cqc_inspection_areas <- function(clean_names = TRUE) {
   query <- paste0("inspection-areas")
 
   cont <- cqc_basic_query(query, clean_names)
@@ -20,5 +19,4 @@ cqc_inspection_areas <- function (clean_names = TRUE) {
   }
 
   df
-
 }

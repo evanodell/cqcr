@@ -10,21 +10,21 @@
 #' @export
 #'
 #' @rdname providers
-#' @examples \donttest{
-#'  # All providers in Tower Hamlets
-#'   prov1 <- cqc_providers(local_authority = "Tower Hamlets")
+#' @examples
+#' \donttest{
+#' # All providers in Tower Hamlets
+#' prov1 <- cqc_providers(local_authority = "Tower Hamlets")
 #' }
-
-cqc_providers <- function (constituency = NULL, local_authority = NULL,
-                           inspection_directorate = NULL,
-                           non_primary_inspection_category_code = NULL,
-                           non_primary_inspection_category_name = NULL,
-                           primary_inspection_category_code = NULL,
-                           primary_inspection_category_name = NULL,
-                           overall_rating = NULL, region = NULL,
-                           regulated_activity = NULL, report_type = NULL,
-                           verbose = TRUE, clean_names = TRUE) {
-
+#'
+cqc_providers <- function(constituency = NULL, local_authority = NULL,
+                          inspection_directorate = NULL,
+                          non_primary_inspection_category_code = NULL,
+                          non_primary_inspection_category_name = NULL,
+                          primary_inspection_category_code = NULL,
+                          primary_inspection_category_name = NULL,
+                          overall_rating = NULL, region = NULL,
+                          regulated_activity = NULL, report_type = NULL,
+                          verbose = TRUE, clean_names = TRUE) {
   dots <- rlang::list2(
     constituency = constituency,
     local_authority = local_authority,
@@ -48,5 +48,4 @@ cqc_providers <- function (constituency = NULL, local_authority = NULL,
   df <- cqcr:::cqc_get_data(query, verbose, type = "providers", clean_names)
 
   df
-
 }

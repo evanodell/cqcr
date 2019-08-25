@@ -56,7 +56,8 @@
 #' @rdname locations
 #' @export
 #'
-#' @examples \donttest{
+#' @examples
+#' \donttest{
 #' ## Get all care homes in Redbridge
 #' loc1 <- cqc_locations(care_home = TRUE, local_authority = "Redbridge")
 #' }
@@ -73,9 +74,9 @@ cqc_locations <- function(care_home = NULL, onspd_ccg_code = NULL,
                           overall_rating = NULL, region = NULL,
                           regulated_activity = NULL, report_type = NULL,
                           verbose = TRUE, clean_names = TRUE) {
-if (is.null(care_home)) {
-  ch_query <- ""
-} else  if (care_home == TRUE) {
+  if (is.null(care_home)) {
+    ch_query <- ""
+  } else if (care_home == TRUE) {
     ch_query <- "&careHome=Y"
   } else if (care_home == FALSE) {
     ch_query <- "&careHome=N"
@@ -100,7 +101,7 @@ if (is.null(care_home)) {
     region = region,
     regulated_activity = regulated_activity,
     report_type = report_type
-    )
+  )
 
   dots_query <- cqc_utils_dots(dots)
 
@@ -112,4 +113,3 @@ if (is.null(care_home)) {
 
   df
 }
-

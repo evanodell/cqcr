@@ -16,8 +16,7 @@
 #'
 #' @export
 
-cqc_partner_code <- function(check_env=FALSE) {
-
+cqc_partner_code <- function(check_env = FALSE) {
   if (check_env) {
     code <- Sys.getenv("CQC_PARTNER_CODE")
     if (code != "") {
@@ -44,4 +43,3 @@ cqc_partner_code <- function(check_env=FALSE) {
   options("cqc.partner.code" = paste0("&partnerCode=", code))
   invisible()
 }
-

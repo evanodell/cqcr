@@ -1,5 +1,5 @@
 Package: cqcr
-Title: What the Package Does (One Line, Title Case)
+Title: Access Care Quality Commission Data
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Evan",
@@ -7,7 +7,11 @@ Authors@R:
            role = c("aut", "cre"),
            email = "evanodell91@gmail.com",
            comment = c(ORCID = "0000-0003-1845-808X"))
-Description: What the package does (one paragraph).
+Description: Access data from the Care Quality Commission (CQC). The CQC 
+    operates an API 
+    <https://www.cqc.org.uk/about-us/transparency/using-cqc-data#api>, with data
+    available under the Open Government License. Data includes information on 
+    providers and locations and CQC ratings.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
