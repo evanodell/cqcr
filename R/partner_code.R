@@ -1,6 +1,4 @@
 
-# NEED TO SORT THIS OUT! Figure out how to include in queries
-
 #' Partner Code
 #'
 #' The CQC wants all organisations using this API to add an additional query
@@ -40,6 +38,6 @@ cqc_partner_code <- function(check_env = FALSE) {
   }
 
   message("Updating CQC_PARTNER_CODE environment variable...")
-  options("cqc.partner.code" = paste0("&partnerCode=", code))
+  options("cqc.partner.code" = paste0("&partnerCode=", utils::URLencode(code)))
   invisible()
 }
