@@ -7,8 +7,5 @@ test_that("report PDF retrieval works", {
   report1 <- cqc_reports(
     inspection_report_link_id = "5c4e83b5-68da-4bae-941b-694a4cd9e808",
     plain_text = FALSE
-    )
-
-
-
-  })
+  )
+})

@@ -2,7 +2,7 @@
 #' Individual providers
 #'
 #' Return information on individual providers
-#'
+#' @param provider_id The ID of a given provider
 #' @inheritParams cqc_locations
 #' @rdname indproviders
 #' @export

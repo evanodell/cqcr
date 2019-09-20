@@ -31,14 +31,13 @@
 #'
 #' @examples
 #' \donttest{
-#'  report2 <- cqc_reports("41d035b1-43e7-4857-be33-cf1b57cf4311")
+#' report2 <- cqc_reports("41d035b1-43e7-4857-be33-cf1b57cf4311")
 #' }
-
+#'
 cqc_reports <- function(inspection_report_link_id,
                         related_document_type = NULL,
                         plain_text = TRUE, attempt_pdf = FALSE,
                         directory = NULL, file_name = NULL, verbose = TRUE) {
-
   rel_doc_query <- if (is.null(related_document_type)) {
     ""
   } else {
@@ -51,7 +50,6 @@ cqc_reports <- function(inspection_report_link_id,
   )
 
   if (plain_text) {
-
     x <- httr::VERB(
       verb = "GET", url = query,
       httr::add_headers(Accept = "text/plain")
@@ -61,34 +59,26 @@ cqc_reports <- function(inspection_report_link_id,
       cont <- httr::content(x)
 
       cont
-
     } else if (attempt_pdf) {
       download.file(query,
-                    paste0(directory, inspection_report_link_id, ".pdf"),
-                    mode = "wb")
-
+        paste0(directory, inspection_report_link_id, ".pdf"),
+        mode = "wb"
+      )
     } else {
-
       code_result <- httr::status_code(x)
 
       if (code_result == 200) {
         stop(paste("Error: Report is available, but not in chosen format"),
-             call. = FALSE)
+          call. = FALSE
+        )
       } else {
         stop(paste("Error code:", httr::status_code(x)), call. = FALSE)
       }
-
-
-
     }
-
   } else {
     download.file(query,
-                  paste0(directory, inspection_report_link_id, ".pdf"),
-                  mode = "wb")
+      paste0(directory, inspection_report_link_id, ".pdf"),
+      mode = "wb"
+    )
   }
-
-
-
 }
-

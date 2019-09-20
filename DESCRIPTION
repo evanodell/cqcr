@@ -7,11 +7,11 @@ Authors@R:
            role = c("aut", "cre"),
            email = "evanodell91@gmail.com",
            comment = c(ORCID = "0000-0003-1845-808X"))
-Description: Access data from the Care Quality Commission (CQC). The CQC 
-    operates an API 
+Description: Access data from the Care Quality Commission (CQC), the health 
+    and adult social care regulator for England. The CQC operates an API 
     <https://www.cqc.org.uk/about-us/transparency/using-cqc-data#api>, with data
     available under the Open Government License. Data includes information on 
-    providers and locations and CQC ratings.
+    providers, locations and CQC ratings and inspection reports.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -20,8 +20,11 @@ Imports:
     httr,
     jsonlite,
     anytime,
-    snakecase
+    snakecase,
+    rlang
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
 Suggests: 
-    testthat (>= 2.1.0)
+    testthat (>= 2.1.0),
+    covr,
+    tibble
