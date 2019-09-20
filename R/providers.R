@@ -45,7 +45,7 @@ cqc_providers <- function(constituency = NULL, local_authority = NULL,
 
   query <- gsub("providers?&", "providers?", query)
 
-  df <- cqcr:::cqc_get_data(query, verbose, type = "providers", clean_names)
+  df <- cqc_get_data(query, verbose, type = "providers", clean_names)
 
   df
 }

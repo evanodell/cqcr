@@ -9,6 +9,15 @@ cqc_location(location_id, verbose = TRUE, clean_names = TRUE)
 
 cqc_location_inspection_area(location_id, clean_names = TRUE)
 }
+\arguments{
+\item{location_id}{The ID of a specific location}
+
+\item{verbose}{If \code{TRUE} prints download progress to console if requesting
+more than 1,000 records.  Defaults to \code{TRUE}.}
+
+\item{clean_names}{If \code{TRUE}, converts a column names to snake_case.
+Defaults to \code{TRUE}.}
+}
 \value{
 A list with information on the given location
 }

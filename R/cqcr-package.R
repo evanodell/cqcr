@@ -1,6 +1,6 @@
 
 
-
+#' @importFrom utils URLencode download.file
 #' @aliases NULL cqcr-package
 NULL
 

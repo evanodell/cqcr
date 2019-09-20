@@ -2,17 +2,45 @@
 % Please edit documentation in R/reports.R
 \name{cqc_reports}
 \alias{cqc_reports}
-\title{Title}
+\title{Inspection reports}
 \usage{
 cqc_reports(inspection_report_link_id, related_document_type = NULL,
-  plain_text = TRUE, verbose = TRUE)
+  plain_text = TRUE, attempt_pdf = FALSE, directory = NULL,
+  file_name = NULL, verbose = TRUE)
 }
 \arguments{
-\item{verbose}{}
+\item{inspection_report_link_id}{The ID of the report to return.}
+
+\item{related_document_type}{An optional qualifier to retrieve a document
+related to the main report. This parameter is the Related Document Type
+found from the relatedDocuments response object. e.g.
+"Use%20of%20Resources". When this parameter is absent, the main report
+for the inspection is returned.}
+
+\item{plain_text}{If \code{TRUE}, returns plain text of report. Otherwise returns
+a PDF. Defaults to \code{TRUE}.}
+
+\item{attempt_pdf}{Set behaviour when attempting to retrieve plain text
+of reports. If \code{TRUE}, attempts to retrieve a PDF if the plain text of the
+report is not available and saves it to \code{directory}.
+Ignored if \code{plain_text == FALSE}. Defaults to \code{FALSE}.}
+
+\item{directory}{The directory to save PDF files in. Defaults to
+current working directory.}
+
+\item{file_name}{A custom file name given to a PDF file being saved locally.
+If \code{NULL}, saves files as \code{inspection_report_link_id}.pdf.
+Defaults to \code{NULL}.}
+
+\item{verbose}{If \code{TRUE} prints download progress to console if requesting
+more than 1,000 records.  Defaults to \code{TRUE}.}
 }
 \description{
-Title
+Return CQC inspection reports, either as a plain text character vector,
+or by saving a PDF to the chosen directory.
 }
 \examples{
-
+\donttest{
+ report2 <- cqc_reports("41d035b1-43e7-4857-be33-cf1b57cf4311")
+}
 }

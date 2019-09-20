@@ -1,4 +1,6 @@
 test_that("big location works", {
+  skip_on_cran()
+
   loc1 <- cqc_locations(care_home = TRUE, local_authority = "Redbridge")
 
   expect_true(tibble::is_tibble(loc1))

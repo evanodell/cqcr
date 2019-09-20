@@ -1,4 +1,6 @@
 test_that("basic providers", {
+  skip_on_cran()
+
   basic_prov1 <- cqc_provider("1-101639192")
 
 

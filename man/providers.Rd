@@ -59,7 +59,8 @@ Retrieve CQC providers, subject to given parameters.
 }
 \examples{
 \donttest{
- # All providers in Tower Hamlets
-  prov1 <- cqc_providers(local_authority = "Tower Hamlets")
+# All providers in Tower Hamlets
+prov1 <- cqc_providers(local_authority = "Tower Hamlets")
 }
+
 }

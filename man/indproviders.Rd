@@ -12,6 +12,10 @@ cqc_provider_locations(provider_id, clean_names = TRUE)
 
 cqc_provider_inspection_areas(provider_id, clean_names = TRUE)
 }
+\arguments{
+\item{clean_names}{If \code{TRUE}, converts a column names to snake_case.
+Defaults to \code{TRUE}.}
+}
 \description{
 Return information on individual providers
 }

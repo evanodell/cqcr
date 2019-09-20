@@ -4,6 +4,9 @@
 #' Retrieve data on individual locations or the inspection area(s) of a given
 #' location.
 #'
+#' @param location_id The ID of a specific location
+#' @inheritParams cqc_locations
+#'
 #' @return A list with information on the given location
 #' @rdname indlocations
 #' @export

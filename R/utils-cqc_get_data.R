@@ -24,7 +24,7 @@ cqc_get_data <- function(query, verbose, type, clean_names) {
   suppressMessages(cont <- jsonlite::fromJSON(httr::content(x, "text")))
 
   if (cont$totalPages > 1) {
-    df <- cqcr:::cqc_multi_page_get_data(
+    df <- cqc_multi_page_get_data(
       cont, query, pages_query,
       verbose, type
     )

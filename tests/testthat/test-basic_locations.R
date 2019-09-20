@@ -1,4 +1,6 @@
 test_that("basic locations works", {
+  skip_on_cran()
+
   location1 <- cqc_location("1-1428643301")
 
   location2 <- cqc_location("1-122710325")

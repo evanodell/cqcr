@@ -40,7 +40,7 @@ cqc_changes <- function(organisation_type = c("provider", "location"),
 
   query <- paste0("changes/", tolower(organisation_type), time_query)
 
-  df <- cqcr:::cqc_get_data(query,
+  df <- cqc_get_data(query,
     verbose = verbose, type = "changes",
     clean_names = clean_names
   )

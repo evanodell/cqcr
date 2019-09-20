@@ -35,8 +35,11 @@ given time period.
 }
 \examples{
 \donttest{
-changes_location <- cqc_changes(organisation_type = "LoCAtiOn",
-                                start_date = "2019-03-10",
-                                end_date = "2019-03-12")
+changes_location <- cqc_changes(
+  organisation_type = "LoCAtiOn",
+  start_date = "2019-03-10",
+  end_date = "2019-03-12"
+)
 }
+
 }
