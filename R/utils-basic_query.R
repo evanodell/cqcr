@@ -16,10 +16,10 @@ cqc_basic_query <- function(query, clean_names, type = "") {
   ))
 
   if (type %in% c("inspectionAreas", "locations")) {
-    cont <- cont[[type]]
+    cont <- dplyr::as_tibble(cont[[type]])
   }
 
-  if (class(cont) == "list") {
+  if ("list" %in% class(cont)) {
     cont <- purrr::compact(cont)
   }
 

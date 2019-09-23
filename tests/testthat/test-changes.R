@@ -7,7 +7,7 @@ test_that("cqc_changes works", {
     end_date = "2019-03-12"
   )
 
-  #expect_equal(nrow(changes_provider), 31)
+  expect_true(tibble::is_tibble(changes_provider))
 
   changes_location <- cqc_changes(
     organisation_type = "LoCAtiOn",
@@ -15,5 +15,5 @@ test_that("cqc_changes works", {
     end_date = "2019-03-11"
   )
 
-  #expect_equal(nrow(changes_location), 21)
+  expect_true(tibble::is_tibble(changes_location))
 })

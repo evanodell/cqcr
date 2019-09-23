@@ -1,12 +1,12 @@
 test_that("big location works", {
   skip_on_cran()
 
-  loc1 <- cqc_locations(care_home = TRUE, local_authority = "Redbridge")
+  loc1 <- cqc_locations_search(care_home = TRUE, local_authority = "Redbridge")
 
   expect_true(tibble::is_tibble(loc1))
   expect_length(loc1, 3)
 
-  loc2 <- cqc_locations(
+  loc2 <- cqc_locations_search(
     care_home = "blah",
     gac_service_type_description = "Acute services with overnight beds",
     local_authority = "Tower Hamlets"
@@ -17,7 +17,7 @@ test_that("big location works", {
   # expect_true("Mile End Hospital" %in% loc2$locationName)
 
 
-  loc3 <- cqc_locations(
+  loc3 <- cqc_locations_search(
     local_authority = "Redbridge", overall_rating = "Good",
     care_home = FALSE
   )
@@ -25,7 +25,7 @@ test_that("big location works", {
   expect_true(tibble::is_tibble(loc3))
   expect_length(loc3, 3)
 
-  loc4 <- cqc_locations(
+  loc4 <- cqc_locations_search(
     local_authority = c("Redbridge", "Hackney"),
     inspection_directorate = "Hospitals"
   )
@@ -35,19 +35,21 @@ test_that("big location works", {
   # expect_true("Homerton University Hospital" %in% loc4loc4$locationName)
 
 
-  loc5 <- cqc_locations(primary_inspection_category_name = "Slimming Clinics")
+  loc5 <- cqc_locations_search(
+    primary_inspection_category_name = "Slimming Clinics"
+    )
 
   expect_true(tibble::is_tibble(loc5))
   expect_length(loc5, 3)
 
-  loc6 <- cqc_locations(
+  loc6 <- cqc_locations_search(
     regulated_activity = "Accommodation for persons who require treatment for substance misuse"
   )
 
   expect_true(tibble::is_tibble(loc6))
   expect_length(loc6, 3)
 
-  loc7 <- cqc_locations(
+  loc7 <- cqc_locations_search(
     report_type = "Location", local_authority = "Tower Hamlets"
   )
 
