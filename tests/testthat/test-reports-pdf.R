@@ -12,7 +12,7 @@ test_that("report PDF retrieval works", {
   expect_true(file.exists("5c4e83b5-68da-4bae-941b-694a4cd9e808.pdf"))
 
   file.remove("5c4e83b5-68da-4bae-941b-694a4cd9e808.pdf")
-
+  ## Only run this test locally
 
 
 })
