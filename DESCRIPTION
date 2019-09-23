@@ -30,5 +30,6 @@ Suggests:
     covr,
     tibble,
     knitr,
-    rmarkdown
+    rmarkdown,
+    leaflet
 VignetteBuilder: knitr
