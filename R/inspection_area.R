@@ -3,7 +3,7 @@
 #'
 #' Retrieves all CQC inspection areas.
 #'
-#' @inheritParams cqc_locations
+#' @inheritParams cqc_locations_search
 #' @return A tibble with inspection areas.
 #' @export
 

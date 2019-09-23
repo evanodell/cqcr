@@ -34,7 +34,8 @@ category code. e.g. "H1"}
 \item{primary_inspection_category_name}{The primary inspection
 category name. e.g. "Slimming Clinics"}
 
-\item{overall_rating}{Include only locations with a given inspection rating.}
+\item{overall_rating}{Include only locations with a given inspection rating.
+e.g. "Good". Accepts character vector of multiple inspection ratings.}
 
 \item{region}{Region of the UK}
 

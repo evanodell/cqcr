@@ -41,6 +41,7 @@
 #' @param non_primary_inspection_category_name The non-primary inspection
 #'  category name. e.g. "Slimming Clinics"
 #' @param overall_rating Include only locations with a given inspection rating.
+#' e.g. "Good". Accepts character vector of multiple inspection ratings.
 #' @param region Region of the UK
 #' @param regulated_activity The type of activity at a location, e.g.
 #' "Accommodation for persons who require treatment for substance misuse".
@@ -59,9 +60,9 @@
 #' @examples
 #' \donttest{
 #' ## Get all care homes in Redbridge
-#' loc1 <- cqc_locations(care_home = TRUE, local_authority = "Redbridge")
+#' loc1 <- cqc_locations_search(care_home = TRUE, local_authority = "Redbridge")
 #' }
-cqc_locations <- function(care_home = NULL, onspd_ccg_code = NULL,
+cqc_locations_search <- function(care_home = NULL, onspd_ccg_code = NULL,
                           onspd_ccg_name = NULL, ods_ccg_code = NULL,
                           ods_ccg_name = NULL,
                           gac_service_type_description = NULL,

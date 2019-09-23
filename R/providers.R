@@ -3,7 +3,7 @@
 #'
 #' Retrieve CQC providers, subject to given parameters.
 #'
-#' @inheritParams cqc_locations
+#' @inheritParams cqc_locations_search
 #'
 #' @return A tibble with the provider ID, name and postcode of all providers
 #' meeting the given parameters.

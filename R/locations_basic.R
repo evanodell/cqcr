@@ -5,7 +5,7 @@
 #' location.
 #'
 #' @param location_id The ID of a specific location
-#' @inheritParams cqc_locations
+#' @inheritParams cqc_locations_search
 #'
 #' @return A list with information on the given location
 #' @rdname indlocations
@@ -15,7 +15,7 @@ cqc_location <- function(location_id, verbose = TRUE, clean_names = TRUE) {
 
   cont <- cqc_basic_query(query, clean_names)
 
-  cont ## still returns a list
+  cont ## still returns a list - how best to process this list?
 }
 
 

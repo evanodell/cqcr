@@ -24,7 +24,7 @@
 #' @param file_name A custom file name given to a PDF file being saved locally.
 #' If `NULL`, saves files as `inspection_report_link_id`.pdf.
 #' Defaults to `NULL`.
-#' @inheritParams cqc_locations
+#' @inheritParams cqc_locations_search
 #'
 # @return
 #' @export

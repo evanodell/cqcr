@@ -3,7 +3,7 @@
 #'
 #' Return information on individual providers
 #' @param provider_id The ID of a given provider
-#' @inheritParams cqc_locations
+#' @inheritParams cqc_locations_search
 #' @rdname indproviders
 #' @export
 cqc_provider <- function(provider_id, clean_names = TRUE) {

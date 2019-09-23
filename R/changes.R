@@ -13,7 +13,7 @@
 #' @param end_date The end of the date range, in `"YYYY-MM-DD"` format,
 #' or any vector of character, integer or numeric that can be be parsed
 #' with [anytime::anytime][anytime::anytime].
-#' @inheritParams cqc_locations
+#' @inheritParams cqc_locations_search
 #'
 #' @return A tibble of all providers or locations that had reported changes in
 #' the given period

@@ -21,10 +21,14 @@ Imports:
     jsonlite,
     anytime,
     snakecase,
-    rlang
+    rlang,
+    purrr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
 Suggests: 
     testthat (>= 2.1.0),
     covr,
-    tibble
+    tibble,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
