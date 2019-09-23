@@ -6,5 +6,4 @@ test_that("basic providers", {
 
   basic_prov2 <- cqc_provider_locations("1-101639192")
   expect_true(tibble::is_tibble(basic_prov2))
-
 })

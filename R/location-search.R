@@ -63,18 +63,18 @@
 #' loc1 <- cqc_locations_search(care_home = TRUE, local_authority = "Redbridge")
 #' }
 cqc_locations_search <- function(care_home = NULL, onspd_ccg_code = NULL,
-                          onspd_ccg_name = NULL, ods_ccg_code = NULL,
-                          ods_ccg_name = NULL,
-                          gac_service_type_description = NULL,
-                          constituency = NULL, local_authority = NULL,
-                          inspection_directorate = NULL,
-                          primary_inspection_category_code = NULL,
-                          primary_inspection_category_name = NULL,
-                          non_primary_inspection_category_code = NULL,
-                          non_primary_inspection_category_name = NULL,
-                          overall_rating = NULL, region = NULL,
-                          regulated_activity = NULL, report_type = NULL,
-                          verbose = TRUE, clean_names = TRUE) {
+                                 onspd_ccg_name = NULL, ods_ccg_code = NULL,
+                                 ods_ccg_name = NULL,
+                                 gac_service_type_description = NULL,
+                                 constituency = NULL, local_authority = NULL,
+                                 inspection_directorate = NULL,
+                                 primary_inspection_category_code = NULL,
+                                 primary_inspection_category_name = NULL,
+                                 non_primary_inspection_category_code = NULL,
+                                 non_primary_inspection_category_name = NULL,
+                                 overall_rating = NULL, region = NULL,
+                                 regulated_activity = NULL, report_type = NULL,
+                                 verbose = TRUE, clean_names = TRUE) {
   if (is.null(care_home)) {
     ch_query <- ""
   } else if (care_home == TRUE) {

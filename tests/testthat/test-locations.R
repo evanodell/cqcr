@@ -37,7 +37,7 @@ test_that("big location works", {
 
   loc5 <- cqc_locations_search(
     primary_inspection_category_name = "Slimming Clinics"
-    )
+  )
 
   expect_true(tibble::is_tibble(loc5))
   expect_length(loc5, 3)
