@@ -13,7 +13,7 @@ cqc_get_data <- function(query, verbose, type, clean_names) {
     getOption("cqc.partner.code")
   )
 
-  query2 <- gsub("?&partnerCode=", "?partnerCode=", query2)
+  query2 <- gsub("?&partnerCode=", "?partnerCode=", query2, fixed = TRUE)
 
   x <- httr::GET(query2)
 

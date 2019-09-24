@@ -3,7 +3,7 @@
 cqc_basic_query <- function(query, clean_names, type = "") {
   query2 <- paste0(baseurl, query, getOption("cqc.partner.code"))
 
-  query2 <- gsub("?&partnerCode=", "?partnerCode=", query2)
+  query2 <- gsub("&partnerCode=", "?partnerCode=", query2, fixed = TRUE)
 
   x <- httr::GET(query2)
 
