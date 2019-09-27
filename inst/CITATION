@@ -1,0 +1,9 @@
+citHeader("To cite cqcr in publications use:")
+
+citEntry(
+  title    = "{cqcr}: Access 'Care Quality Commission' Data",
+  author = c(person("Evan", "Odell")),
+  doi = "10.5281/zenodo.3452020",
+  year     = "2019",
+  url = c("https://github.com/evanodell/cqcr"))
+)
