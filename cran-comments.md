@@ -1,3 +1,10 @@
+## Description
+
+A data retrieval package for data from the 'Care Quality Comission', which
+inspects hospitals, care homes and other medical and social care activities in
+England. This is the first submission to CRAN.
+
+
 ## Test environments
 * local OS X install, R 3.6.1
 * ubuntu 14.04 (on travis-ci), R 3.6.1
