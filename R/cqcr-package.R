@@ -1,6 +1,17 @@
 
-
+#' cqcr
+#'
+#' Access data from the 'Care Quality Commission', the health and adult social
+#' care regulator for England. The 'Care Quality Commission' operates an
+#' [API](https://www.cqc.org.uk/about-us/transparency/using-cqc-data#api),
+#' with data available under the Open Government License. Data includes
+#' information on service providers, locations such as hospitals, care homes
+#' and medical clinics, and ratings and inspection reports. Registration is
+#' not required, although you should use the [cqc_partner_code()] function
+#' to set an indicator of the organisation you are from when querying the API.
+#'
 #' @importFrom utils URLencode download.file
+#' @name cqcr
 #' @aliases NULL cqcr-package
 NULL
 
@@ -15,6 +26,5 @@ NULL
       options("cqc.partner.code" = key)
     }
   }
-
   invisible()
 }

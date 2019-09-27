@@ -1,5 +1,5 @@
 Package: cqcr
-Title: Access Care Quality Commission Data
+Title: Access 'Care Quality Commission' Data
 Version: 0.1.0
 Authors@R: 
     person(given = "Evan",
@@ -7,12 +7,13 @@ Authors@R:
            role = c("aut", "cre"),
            email = "evanodell91@gmail.com",
            comment = c(ORCID = "0000-0003-1845-808X"))
-Description: Access data from the Care Quality Commission, the health 
-    and adult social care regulator for England. The Care Quality Commission 
+Description: Access data from the 'Care Quality Commission', the health 
+    and adult social care regulator for England. The 'Care Quality Commission' 
     operates an API 
     <https://www.cqc.org.uk/about-us/transparency/using-cqc-data#api>, with data
     available under the Open Government License. Data includes information on 
-    providers, locations, ratings and inspection reports.
+    service providers, locations such as hospitals, care homes and 
+    medical clinics, and ratings and inspection reports.
 URL: https://github.com/evanodell/cqcr, https://docs.evanodell.com/cqcr
 BugReports: https://github.com/evanodell/cqcr/issues
 License: GPL-3
