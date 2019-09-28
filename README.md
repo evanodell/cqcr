@@ -24,10 +24,10 @@ Get data from the Care Quality Commission
 
 ## Installation
 
-Not yet on CRAN. To install from GitHub use:
+To install the development version from GitHub use:
 
     #install.packages("devtools")
-    devtools::install_github("evanodell/hansard")
+    devtools::install_github("evanodell/cqcr")
 
 ## Notes
 
@@ -38,3 +38,22 @@ Please note that the ‘cqcr’ project is released with a [Contributor Code
 of
 Conduct](https://github.com/evanodell/cqcr/blob/master/CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms.
+
+# Citing cqcr
+
+Odell E (2019). *cqcr: Access ‘Care Quality Commission’ Data*. doi:
+10.5281/zenodo.3452020, R package version 0.1.1, \<URL:
+<https://github.com/evanodell/cqcr>\>.
+
+A BibTeX entry for LaTeX users is
+
+``` 
+  @Manual{,
+    title = {{cqcr}: Access 'Care Quality Commission' Data},
+    author = {Evan Odell},
+    doi = {10.5281/zenodo.3452020},
+    year = {2019},
+    note = {R package version 0.1.0},
+    url = {https://github.com/evanodell/cqcr},
+  }
+```
