@@ -6,5 +6,5 @@ bibentry(bibtype = "Manual",
   doi = "10.5281/zenodo.3452020",
   year = "2019",
   note = note,
-  url = c("https://github.com/evanodell/cqcr"))
+  url = c("https://github.com/evanodell/cqcr")
 )

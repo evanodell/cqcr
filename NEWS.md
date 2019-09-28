@@ -1,8 +1,8 @@
+
+# cqcr 0.1.1
+
+Fixed error in CITATION file.
+
 # cqcr 0.1.0
 
-* Added a `NEWS.md` file to track changes to the package.
-
-
-to do:  
-
-1. Reports
+* First version release
