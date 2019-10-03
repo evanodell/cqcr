@@ -11,8 +11,12 @@ cqc_partner_code(check_env = FALSE)
 \code{CQC_PARTNER_CODE} first before asking for user input.}
 }
 \description{
+Function to add an identifier code to API queries.
+}
+\details{
 The CQC wants all organisations using this API to add an additional query
 identifying themselves to all queries.
+
 If you are a CQC Syndication partner the value for this code
 will be provided to you, otherwise an informative but concise code
 representing your organisation should be chosen. The partner code can be set

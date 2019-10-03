@@ -7,7 +7,7 @@
 #' @param location_id The ID of a specific location
 #' @inheritParams cqc_locations_search
 #'
-#' @return A list with information on the given location
+#' @return A list with information on the given location.
 #' @rdname indlocations
 #' @export
 cqc_location <- function(location_id, verbose = TRUE, clean_names = TRUE) {

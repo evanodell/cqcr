@@ -35,6 +35,11 @@ Defaults to \code{NULL}.}
 \item{verbose}{If \code{TRUE} prints download progress to console if requesting
 more than 1,000 records.  Defaults to \code{TRUE}.}
 }
+\value{
+Either a PDF of the inspection report saved to the working directory,
+or a character vector with the plain text of the inspection report,
+depending on parameters used.
+}
 \description{
 Return CQC inspection reports, either as a plain text character vector,
 or by saving a PDF to the chosen directory.

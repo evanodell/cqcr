@@ -26,7 +26,9 @@
 #' Defaults to `NULL`.
 #' @inheritParams cqc_locations_search
 #'
-# @return
+#' @return Either a PDF of the inspection report saved to the working directory,
+#' or a character vector with the plain text of the inspection report,
+#' depending on parameters used.
 #' @export
 #'
 #' @examples

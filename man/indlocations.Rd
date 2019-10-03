@@ -19,7 +19,7 @@ more than 1,000 records.  Defaults to \code{TRUE}.}
 Defaults to \code{TRUE}.}
 }
 \value{
-A list with information on the given location
+A list with information on the given location.
 }
 \description{
 Retrieve data on individual locations or the inspection area(s) of a given

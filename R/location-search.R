@@ -108,7 +108,7 @@ cqc_locations_search <- function(care_home = NULL, onspd_ccg_code = NULL,
 
   query <- paste0("locations?", dots_query, ch_query)
 
-  query <- gsub("locations?&", "locations?", query) ## fixing some weird bug things
+  query <- gsub("locations?&", "locations?", query)
 
   df <- cqc_get_data(query, verbose, type = "locations", clean_names)
 

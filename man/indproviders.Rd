@@ -18,6 +18,11 @@ cqc_provider_inspection_areas(provider_id, clean_names = TRUE)
 \item{clean_names}{If \code{TRUE}, converts a column names to snake_case.
 Defaults to \code{TRUE}.}
 }
+\value{
+A tibble with information on a given CQC provider or providers.
+
+A tibble with information the inspection area of a given provider.
+}
 \description{
 Return information on individual providers
 }

@@ -1,9 +1,12 @@
 
 #' Partner Code
 #'
-#' The CQC wants all organisations using this API to add an additional query
+#' Function to add an identifier code to API queries.
+#'
+#' @details The CQC wants all organisations using this API to add an additional query
 #' identifying themselves to all queries.
-#' If you are a CQC Syndication partner the value for this code
+#'
+#' @details If you are a CQC Syndication partner the value for this code
 #' will be provided to you, otherwise an informative but concise code
 #' representing your organisation should be chosen. The partner code can be set
 #' as an environmental variable named `CQC_PARTNER_CODE`, or using this
