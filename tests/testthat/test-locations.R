@@ -32,7 +32,7 @@ test_that("big location works", {
 
   expect_true(tibble::is_tibble(loc4))
   expect_length(loc4, 3)
-  # expect_true("Homerton University Hospital" %in% loc4loc4$locationName)
+  expect_true("Homerton University Hospital" %in% loc4$location_name)
 
 
   loc5 <- cqc_locations_search(
@@ -55,4 +55,15 @@ test_that("big location works", {
 
   expect_true(tibble::is_tibble(loc7))
   expect_length(loc7, 3)
+
+
+  loc8 <- cqc_locations_search(local_authority = "Hackney&")
+
+  expect_true(tibble::is_tibble(loc8))
+  expect_length(loc8, 3)
+
+  loc9 <- cqc_locations_search(care_home = TRUE, region = "North West")
+
+  expect_true(tibble::is_tibble(loc9))
+  expect_length(loc9, 3)
 })

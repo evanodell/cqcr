@@ -25,7 +25,7 @@
 #' selected by this organisation is known and matches one of the values of
 #' this parameter.
 #' @param gac_service_type_description GAC Service Type Descriptions,
-#' matching one of more values of this parameter.
+#' matching one or more values of this parameter.
 #' e.g. "Acute services with overnight beds".
 #' @param constituency Location is in a given parliamentary constituency
 #' @param local_authority Location is in a given local authority.
@@ -39,16 +39,16 @@
 #' @param non_primary_inspection_category_code The non-primary inspection
 #'  category code. e.g. "H1"
 #' @param non_primary_inspection_category_name The non-primary inspection
-#'  category name. e.g. "Slimming Clinics"
+#'  category name. e.g. "Slimming Clinics".
 #' @param overall_rating Include only locations with a given inspection rating.
 #' e.g. "Good". Accepts character vector of multiple inspection ratings.
-#' @param region Region of the UK
+#' @param region Region of the UK, e.g. "London" or "North East".
 #' @param regulated_activity The type of activity at a location, e.g.
 #' "Accommodation for persons who require treatment for substance misuse".
 #' @param report_type The type of report, e.g. "Location", "Provider"
-#'  or "CoreService"
+#'  or "CoreService".
 #' @param verbose If `TRUE` prints download progress to console if requesting
-#' more than 1,000 records.  Defaults to `TRUE`.
+#' more than 1,000 records. Defaults to `TRUE`.
 #' @param clean_names If `TRUE`, converts a column names to snake_case.
 #' Defaults to `TRUE`.
 #'
@@ -108,7 +108,7 @@ cqc_locations_search <- function(care_home = NULL, onspd_ccg_code = NULL,
 
   query <- paste0("locations?", dots_query, ch_query)
 
-  query <- gsub("locations?&", "locations?", query)
+  query <- gsub("locations?&", "locations?", query, fixed = TRUE)
 
   df <- cqc_get_data(query, verbose, type = "locations", clean_names)
 

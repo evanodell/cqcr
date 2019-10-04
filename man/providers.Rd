@@ -26,7 +26,7 @@ one or more off "Adult social care", "Hospitals",
 category code. e.g. "H1"}
 
 \item{non_primary_inspection_category_name}{The non-primary inspection
-category name. e.g. "Slimming Clinics"}
+category name. e.g. "Slimming Clinics".}
 
 \item{primary_inspection_category_code}{The primary inspection
 category code. e.g. "H1"}
@@ -37,16 +37,16 @@ category name. e.g. "Slimming Clinics"}
 \item{overall_rating}{Include only locations with a given inspection rating.
 e.g. "Good". Accepts character vector of multiple inspection ratings.}
 
-\item{region}{Region of the UK}
+\item{region}{Region of the UK, e.g. "London" or "North East".}
 
 \item{regulated_activity}{The type of activity at a location, e.g.
 "Accommodation for persons who require treatment for substance misuse".}
 
 \item{report_type}{The type of report, e.g. "Location", "Provider"
-or "CoreService"}
+or "CoreService".}
 
 \item{verbose}{If \code{TRUE} prints download progress to console if requesting
-more than 1,000 records.  Defaults to \code{TRUE}.}
+more than 1,000 records. Defaults to \code{TRUE}.}
 
 \item{clean_names}{If \code{TRUE}, converts a column names to snake_case.
 Defaults to \code{TRUE}.}

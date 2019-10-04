@@ -20,7 +20,7 @@ or any vector of character, integer or numeric that can be be parsed
 with \link[anytime:anytime]{anytime::anytime}.}
 
 \item{verbose}{If \code{TRUE} prints download progress to console if requesting
-more than 1,000 records.  Defaults to \code{TRUE}.}
+more than 1,000 records. Defaults to \code{TRUE}.}
 
 \item{clean_names}{If \code{TRUE}, converts a column names to snake_case.
 Defaults to \code{TRUE}.}

@@ -18,7 +18,7 @@ cqc_get_data <- function(query, verbose, type, clean_names) {
   x <- httr::GET(query2)
 
   if (httr::status_code(x) != "200") {
-    stop(paste("Error code:", httr::status_code(x)), call. = FALSE)
+    stop(paste("Request returned error code:", httr::status_code(x)), call. = FALSE)
   }
 
   suppressMessages(cont <- jsonlite::fromJSON(httr::content(x, "text")))
