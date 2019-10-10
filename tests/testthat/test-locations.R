@@ -66,4 +66,17 @@ test_that("big location works", {
 
   expect_true(tibble::is_tibble(loc9))
   expect_length(loc9, 3)
+
+  ### Location details test --------------------------
+
+  loc4_details <- cqc_location_details(loc4)
+
+  expect_true(is.list(loc4_details))
+  expect_equal(class(loc4_details[[1]]), "list")
+  # cuz why not use two different ways of checking?
+
+  loc3_details <- cqc_location_details(loc3, verbose = FALSE)
+  expect_true(is.list(loc3_details))
+  expect_equal(class(loc3_details[[1]]), "list")
+
 })
