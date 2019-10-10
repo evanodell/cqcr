@@ -3,6 +3,7 @@
 export(cqc_changes)
 export(cqc_inspection_areas)
 export(cqc_location)
+export(cqc_location_details)
 export(cqc_location_inspection_area)
 export(cqc_locations_search)
 export(cqc_partner_code)
