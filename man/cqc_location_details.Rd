@@ -9,7 +9,7 @@ cqc_location_details(x, location_col = "location_id", verbose = TRUE,
 }
 \arguments{
 \item{x}{A data frame with location IDs, e.g. one
-returned by \code{\link[=cqc_location_search]{cqc_location_search()}}.}
+returned by \code{\link[=cqc_locations_search]{cqc_locations_search()}}.}
 
 \item{location_col}{The name of the column with location IDs, defaults to
 \code{"location_id"}.}

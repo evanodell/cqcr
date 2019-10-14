@@ -54,7 +54,6 @@
 #'
 #' @return A tibble with the location ID, name and postcode of all locations
 #' meeting the given parameters.
-#' @rdname locations
 #' @export
 #'
 #' @examples

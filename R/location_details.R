@@ -2,7 +2,7 @@
 #' Location Details
 #'
 #' @param x A data frame with location IDs, e.g. one
-#' returned by [cqc_location_search()].
+#' returned by [cqc_locations_search()].
 #' @param location_col The name of the column with location IDs, defaults to
 #' `"location_id"`.
 #' @param verbose If `TRUE`, displays progress bar on data retrieval. Requires
