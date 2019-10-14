@@ -5,6 +5,10 @@
 #' returned by [cqc_location_search()].
 #' @param location_col The name of the column with location IDs, defaults to
 #' `"location_id"`.
+#' @param verbose If `TRUE`, displays progress bar on data retrieval. Requires
+#' the [pkg::abc-pbapply] package to be installed. If `verbose=TRUE` and
+#' [pkg::abc-pbapply] is not not installed, will display a warning and
+#' continue silently.
 #' @inheritParams cqc_locations_search
 #'
 #' @return A list with location details
@@ -24,16 +28,21 @@ cqc_location_details <- function(x, location_col = "location_id",
   }
 
   if (verbose) {
-    if (!requireNamespace("pbapply", quietly = TRUE)) {
-      stop("Package \"pbapply\" is needed if `verbose==TRUE`
-      Please install or use `verbose==FALSE`",
-        call. = FALSE
+    if (requireNamespace("pbapply", quietly = TRUE)) {
+      loc_list <- pbapply::pblapply(x[[location_col]], cqc_location,
+                                    clean_names = clean_names)
+    } else {
+      warning("Package \"pbapply\" is needed if `verbose=TRUE`
+      Please install to see a progress bar.",
+              call. = TRUE, immediate. = TRUE
       )
+
+      loc_list <- lapply(x[[location_col]], cqc_location,
+                         clean_names = clean_names
+      )
+
     }
 
-    loc_list <- pbapply::pblapply(x[[location_col]], cqc_location,
-      clean_names = clean_names
-    )
   } else {
     loc_list <- lapply(x[[location_col]], cqc_location,
       clean_names = clean_names

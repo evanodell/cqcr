@@ -1,6 +1,4 @@
 
-# https://anypoint.mulesoft.com/exchange/portals/care-quality-commission-5/4d36bd23-127d-4acf-8903-ba292ea615d4/cqc-syndication-1/1.0.37/console/method/%231570/
-
 #' Changes
 #'
 #' Return ID's of CQC providers or locations that have reported changes in a
@@ -27,7 +25,7 @@
 #'   end_date = "2019-03-12"
 #' )
 #' }
-#'
+
 cqc_changes <- function(organisation_type = c("provider", "location"),
                         start_date = "2000-01-01", end_date = Sys.Date(),
                         verbose = TRUE, clean_names = TRUE) {

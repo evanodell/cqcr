@@ -2,7 +2,7 @@
 title: "Introduction to `cqcr`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{introduction}
+  %\VignetteIndexEntry{Introduction}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -395,7 +395,7 @@ care_home_df
 Then, we can map it out with `leaflet`. In this case the colours indicate the most recent inspection rating, and the size corresponds to a scaled count of beds.
 
 
-```{r leaflet-map}
+```{r leaflet-map, out.width='100%', fig.height=5, fig.align='center'}
 library(leaflet)
 
 pal <- colorFactor(c("blue", "green", "orange", "red", "gray27"),

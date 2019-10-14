@@ -19,11 +19,6 @@ cqc_location <- function(location_id, verbose = TRUE, clean_names = TRUE) {
 }
 
 
-
-
-# "https://api.cqc.org.uk/public/v1/locations/{location_id}/inspection-areas"
-
-# https://anypoint.mulesoft.com/exchange/portals/care-quality-commission-5/4d36bd23-127d-4acf-8903-ba292ea615d4/cqc-syndication-1/1.0.37/console/method/%23850/
 #' @rdname indlocations
 #' @export
 cqc_location_inspection_area <- function(location_id, clean_names = TRUE) {

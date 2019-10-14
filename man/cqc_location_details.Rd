@@ -14,8 +14,10 @@ returned by \code{\link[=cqc_location_search]{cqc_location_search()}}.}
 \item{location_col}{The name of the column with location IDs, defaults to
 \code{"location_id"}.}
 
-\item{verbose}{If \code{TRUE} prints download progress to console if requesting
-more than 1,000 records. Defaults to \code{TRUE}.}
+\item{verbose}{If \code{TRUE}, displays progress bar on data retrieval. Requires
+the \link[pkg:abc-pbapply]{pkg::abc-pbapply} package to be installed. If \code{verbose=TRUE} and
+\link[pkg:abc-pbapply]{pkg::abc-pbapply} is not not installed, will display a warning and
+continue silently.}
 
 \item{clean_names}{If \code{TRUE}, converts a column names to snake_case.
 Defaults to \code{TRUE}.}
@@ -25,4 +27,12 @@ A list with location details
 }
 \description{
 Location Details
+}
+\examples{
+\donttest{
+loc1 <- cqc_locations_search(care_home = TRUE, local_authority = "Hackney")
+
+loc1_details <- cqc_location_details(loc1)
+}
+
 }
