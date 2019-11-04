@@ -1,6 +1,7 @@
 test_that("big location works", {
   skip_on_cran()
 
+# Location search test ----------------------------------------------------
   loc1 <- cqc_locations_search(care_home = TRUE, local_authority = "Redbridge")
 
   expect_true(tibble::is_tibble(loc1))
@@ -67,7 +68,8 @@ test_that("big location works", {
   expect_true(tibble::is_tibble(loc9))
   expect_length(loc9, 3)
 
-  ### Location details test --------------------------
+
+# Location details test ---------------------------------------------------
 
   loc4_details <- cqc_location_details(loc4)
 
