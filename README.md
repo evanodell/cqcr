@@ -23,6 +23,14 @@ coverage](https://codecov.io/gh/evanodell/cqcr/branch/master/graph/badge.svg)](h
 Get data from the Care Quality Commission
 [API](https://anypoint.mulesoft.com/exchange/portals/care-quality-commission-5/4d36bd23-127d-4acf-8903-ba292ea615d4/cqc-syndication-1/)
 
+Access data from the ‘Care Quality Commission’, the health and adult
+social care regulator for England. The ‘Care Quality Commission’
+operates an
+[API](https://www.cqc.org.uk/about-us/transparency/using-cqc-data#api),
+with data available under the Open Government License. Data includes
+information on service providers, locations such as hospitals, care
+homes and medical clinics, and ratings and inspection reports.
+
 ## Installation
 
 The package is available on
@@ -39,8 +47,8 @@ To install the development version from GitHub use:
 # Citing cqcr
 
 Odell E (2019). *cqcr: Access ‘Care Quality Commission’ Data*. doi:
-10.5281/zenodo.3452020, R package version 0.1.2, \<URL:
-<https://github.com/evanodell/cqcr>\>.
+10.5281/zenodo.3452020, R package version 0.1.2.9000, URL:
+<https://github.com/evanodell/cqcr>.
 
 A BibTeX entry for LaTeX users is
 
@@ -50,7 +58,7 @@ A BibTeX entry for LaTeX users is
     author = {Evan Odell},
     doi = {10.5281/zenodo.3452020},
     year = {2019},
-    note = {R package version 0.1.2},
+    note = {R package version 0.1.2.9000},
     url = {https://github.com/evanodell/cqcr},
   }
 ```
