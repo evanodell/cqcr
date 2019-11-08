@@ -34,20 +34,13 @@ test_that("big location works", {
   expect_length(loc4, 3)
   expect_true("Homerton University Hospital" %in% loc4$location_name)
 
-
-  loc5 <- cqc_locations_search(
-    primary_inspection_category_name = "Slimming Clinics"
-  )
-
-  expect_true(tibble::is_tibble(loc5))
-  expect_length(loc5, 3)
-
   loc6 <- cqc_locations_search(
     regulated_activity = "Accommodation for persons who require treatment for substance misuse"
   )
 
   expect_true(tibble::is_tibble(loc6))
   expect_length(loc6, 3)
+  expect_gte(nrow(loc6), 400)
 
   loc7 <- cqc_locations_search(
     report_type = "Location", local_authority = "Tower Hamlets"
@@ -62,10 +55,12 @@ test_that("big location works", {
   expect_true(tibble::is_tibble(loc8))
   expect_length(loc8, 3)
 
-  loc9 <- cqc_locations_search(care_home = TRUE, region = "North West")
+  expect_message(loc9 <- cqc_locations_search(care_home = TRUE,
+                                              region = "North West"))
 
   expect_true(tibble::is_tibble(loc9))
   expect_length(loc9, 3)
+  expect_gte(nrow(loc9), 3000)
 
   ### Location details test --------------------------
 

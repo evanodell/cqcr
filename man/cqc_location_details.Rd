@@ -15,8 +15,8 @@ returned by \code{\link[=cqc_locations_search]{cqc_locations_search()}}.}
 \code{"location_id"}.}
 
 \item{verbose}{If \code{TRUE}, displays progress bar on data retrieval. Requires
-the \link[pkg:abc-pbapply]{pkg::abc-pbapply} package to be installed. If \code{verbose=TRUE} and
-\link[pkg:abc-pbapply]{pkg::abc-pbapply} is not not installed, will display a warning and
+the \link[pkg:pbapply]{pkg::pbapply} package to be installed. If \code{verbose=TRUE} and
+\link[pkg:pbapply]{pkg::pbapply} is not not installed, will display a warning and
 continue silently.}
 
 \item{clean_names}{If \code{TRUE}, converts a column names to snake_case.

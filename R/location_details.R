@@ -6,8 +6,8 @@
 #' @param location_col The name of the column with location IDs, defaults to
 #' `"location_id"`.
 #' @param verbose If `TRUE`, displays progress bar on data retrieval. Requires
-#' the [pkg::abc-pbapply] package to be installed. If `verbose=TRUE` and
-#' [pkg::abc-pbapply] is not not installed, will display a warning and
+#' the [pkg::pbapply] package to be installed. If `verbose=TRUE` and
+#' [pkg::pbapply] is not not installed, will display a warning and
 #' continue silently.
 #' @inheritParams cqc_locations_search
 #'

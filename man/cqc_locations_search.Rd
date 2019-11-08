@@ -88,7 +88,9 @@ Returns all available locations, subject to given parameters.
 All parameters except \code{care_home}, \code{verbose} and \code{clean_names}
 accept an array of values, and will return locations matching any of the
 values of those arrays, subject to other parameters. Search parameters are
-case sensitive, e.g. "hospitals"
+case sensitive, e.g. for \code{inspection_directorate},
+"hospitals" will not return any information, "Hospitals" will, subject to
+other parameters.
 }
 \examples{
 \donttest{

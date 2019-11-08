@@ -6,11 +6,14 @@
 #' @details The CQC wants all organisations using this API to add an
 #' additional query identifying themselves to all queries.
 #'
-#' @details If you are a CQC Syndication partner the value for this code
+#' @details According to the CQC's documentation,
+#' "If you are a CQC Syndication partner the value for this code
 #' will be provided to you, otherwise an informative but concise code
-#' representing your organisation should be chosen. The partner code can be set
-#' as an environmental variable named `CQC_PARTNER_CODE`, or using this
+#' representing your organisation should be chosen." The partner code can be
+#' set as an environmental variable named `CQC_PARTNER_CODE`, or using this
 #' function. If set, it will automatically be included in all queries.
+#' If not set, a message will appear with each data retrieval request reminding
+#' you to set a partner code.
 #'
 #' @param check_env If TRUE, will check the environment variable
 #'   `CQC_PARTNER_CODE` first before asking for user input.
