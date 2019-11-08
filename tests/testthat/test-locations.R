@@ -55,8 +55,10 @@ test_that("big location works", {
   expect_true(tibble::is_tibble(loc8))
   expect_length(loc8, 3)
 
-  expect_message(loc9 <- cqc_locations_search(care_home = TRUE,
-                                              region = "North West"))
+  expect_message(loc9 <- cqc_locations_search(
+    care_home = TRUE,
+    region = "North West"
+  ))
 
   expect_true(tibble::is_tibble(loc9))
   expect_length(loc9, 3)
@@ -73,5 +75,4 @@ test_that("big location works", {
   loc3_details <- cqc_location_details(loc3, verbose = FALSE)
   expect_true(is.list(loc3_details))
   expect_equal(class(loc3_details[[1]]), "list")
-
 })
