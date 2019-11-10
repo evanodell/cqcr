@@ -2,7 +2,7 @@
 % Please edit documentation in R/location_details.R
 \name{cqc_location_details}
 \alias{cqc_location_details}
-\title{Location Details}
+\title{Location Details - still incomplete}
 \usage{
 cqc_location_details(x, location_col = "location_id", verbose = TRUE,
   clean_names = TRUE)
@@ -15,9 +15,10 @@ returned by \code{\link[=cqc_locations_search]{cqc_locations_search()}}.}
 \code{"location_id"}.}
 
 \item{verbose}{If \code{TRUE}, displays progress bar on data retrieval. Requires
-the \link[pkg:pbapply]{pkg::pbapply} package to be installed. If \code{verbose=TRUE} and
-\link[pkg:pbapply]{pkg::pbapply} is not not installed, will display a warning and
-continue silently.}
+the \href{https://cran.r-project.org/package=pbapply}{pbapply} package to be
+installed. If \code{verbose=TRUE} and
+\href{https://cran.r-project.org/package=pbapply}{pbapply} is not not
+installed, will display a warning and continue silently.}
 
 \item{clean_names}{If \code{TRUE}, converts a column names to snake_case.
 Defaults to \code{TRUE}.}
@@ -26,7 +27,7 @@ Defaults to \code{TRUE}.}
 A list with location details
 }
 \description{
-Location Details
+Location Details - still incomplete
 }
 \examples{
 \donttest{

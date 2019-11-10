@@ -1,14 +1,15 @@
 
-#' Location Details
+#' Location Details - still incomplete
 #'
 #' @param x A data frame with location IDs, e.g. one
 #' returned by [cqc_locations_search()].
 #' @param location_col The name of the column with location IDs, defaults to
 #' `"location_id"`.
 #' @param verbose If `TRUE`, displays progress bar on data retrieval. Requires
-#' the [pkg::pbapply] package to be installed. If `verbose=TRUE` and
-#' [pkg::pbapply] is not not installed, will display a warning and
-#' continue silently.
+#' the [`pbapply`](https://cran.r-project.org/package=pbapply) package to be
+#' installed. If `verbose=TRUE` and
+#' [`pbapply`](https://cran.r-project.org/package=pbapply) is not not
+#' installed, will display a warning and continue silently.
 #' @inheritParams cqc_locations_search
 #'
 #' @return A list with location details
