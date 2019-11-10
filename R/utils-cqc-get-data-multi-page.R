@@ -13,18 +13,9 @@ cqc_multi_page_get_data <- function(cont, query, pages_query, verbose, type) {
       message(paste("Downloading", seq_list[[i]], "of", max(seq_list)))
     }
 
-    query2 <- paste0(
-      baseurl, query, pages_query, seq_list[[i]],
-      getOption("cqc.partner.code")
-    )
+    query2 <- paste0(query, pages_query, seq_list[[i]])
 
-    x <- httr::GET(query2)
-
-    if (httr::status_code(x) != "200") {
-      stop(paste("Error code:", httr::status_code(x)), call. = FALSE)
-    }
-
-    suppressMessages(cont <- jsonlite::fromJSON(httr::content(x, "text")))
+    cont <- cqc_query_construction(query2)
 
     df_list[[seq_list[[i]]]] <- dplyr::bind_rows(cont[[type]])
   }

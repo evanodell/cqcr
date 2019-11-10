@@ -1,6 +1,6 @@
 
 
-
+## Dots utility function
 cqc_utils_dots <- function(dots) {
   dots_vector <- c()
 

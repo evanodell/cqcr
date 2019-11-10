@@ -7,7 +7,9 @@
 #' @details All parameters except `care_home`, `verbose` and `clean_names`
 #' accept an array of values, and will return locations matching any of the
 #' values of those arrays, subject to other parameters. Search parameters are
-#' case sensitive, e.g. "hospitals"
+#' case sensitive, e.g. for `inspection_directorate`,
+#' "hospitals" will not return any information, "Hospitals" will, subject to
+#' other parameters.
 #'
 #' @param care_home If `TRUE`, only returns care homes. If `FALSE`, returns
 #' all locations except care homes. Defaults to `NULL` and returns all
