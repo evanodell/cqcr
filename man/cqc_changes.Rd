@@ -41,4 +41,5 @@ changes_location <- cqc_changes(
   end_date = "2019-03-12"
 )
 }
+
 }

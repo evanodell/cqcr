@@ -11,7 +11,7 @@
 #' @rdname indlocations
 #' @export
 cqc_location <- function(location_id, verbose = TRUE, clean_names = TRUE) {
-  query <- paste0("locations/", location_id)
+  query <- paste0("locations/", location_id, "?")
 
   cont <- cqc_basic_query(query, clean_names)
 

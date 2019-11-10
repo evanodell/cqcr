@@ -1,7 +1,4 @@
 
-
-## Not working
-
 #' Inspection reports
 #'
 #' Return CQC inspection reports, either as a plain text character vector,

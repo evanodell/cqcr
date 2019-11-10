@@ -11,6 +11,13 @@
 #' to set an indicator of the organisation you are from when querying the API.
 #'
 #' @importFrom utils URLencode download.file
+#' @importFrom purrr compact
+#' @importFrom dplyr as_tibble bind_rows
+#' @importFrom httr VERB GET add_headers http_type content status_code
+#' @importFrom jsonlite fromJSON
+#' @importFrom anytime iso8601 anytime
+#' @importFrom snakecase to_lower_camel_case to_snake_case
+#' @importFrom rlang list2
 #' @name cqcr
 #' @aliases NULL cqcr-package
 NULL

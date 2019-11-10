@@ -3,7 +3,6 @@ cqc_multi_page_get_data <- function(cont, query, pages_query, verbose, type) {
   df_list <- list()
 
   df_list[[1]] <- dplyr::bind_rows(cont[[type]])
-  ## Need a way to do this generically. Maybe type of object?
 
   seq_list <- seq(from = 2, to = cont$totalPages)
 

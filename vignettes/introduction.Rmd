@@ -35,6 +35,8 @@ Given the list of care home IDs, we can retrieve more detailed information on ea
 ```{r care-homes-data-frame, eval=FALSE}
 care_home_list <- lapply(loc1$location_id, cqc_location)
 
+care_home_details <- cqc_location_details(loc1)
+
 care_home_df <- map_dfr(care_home_list, `[`, c("location_id", "name", "number_of_beds",
                                     "onspd_longitude", "onspd_latitude"))
 

@@ -10,9 +10,9 @@ Authors@R:
 Description: Access data from the 'Care Quality Commission', the health 
     and adult social care regulator for England. The 'Care Quality Commission' 
     operates an API 
-    <https://www.cqc.org.uk/about-us/transparency/using-cqc-data#api>, with data
-    available under the Open Government License. Data includes information on 
-    service providers, locations such as hospitals, care homes and 
+    <https://www.cqc.org.uk/about-us/transparency/using-cqc-data#api>, with 
+    data available under the Open Government License. Data includes information
+    on service providers, locations such as hospitals, care homes and 
     medical clinics, and ratings and inspection reports.
 URL: https://github.com/evanodell/cqcr, https://docs.evanodell.com/cqcr
 BugReports: https://github.com/evanodell/cqcr/issues

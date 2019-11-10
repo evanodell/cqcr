@@ -3,7 +3,11 @@
 cqc_query_construction <- function(query) {
   partner_code <- getOption("cqc.partner.code")
 
-  if (is.null(partner_code)) message("CQC Partner Code not set.")
+  if (is.null(partner_code))  {
+    message("CQC Partner Code not set.")
+    } else if (!grepl("&", query)) {
+      query <- paste0(query, "?")
+  }
 
   query2 <- paste0(
     baseurl, query, partner_code
