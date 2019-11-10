@@ -30,19 +30,18 @@ cqc_location_details <- function(x, location_col = "location_id",
   if (verbose) {
     if (requireNamespace("pbapply", quietly = TRUE)) {
       loc_list <- pbapply::pblapply(x[[location_col]], cqc_location,
-                                    clean_names = clean_names)
+        clean_names = clean_names
+      )
     } else {
       warning("Package \"pbapply\" is needed if `verbose=TRUE`
       Please install to see a progress bar.",
-              call. = TRUE, immediate. = TRUE
+        call. = TRUE, immediate. = TRUE
       )
 
       loc_list <- lapply(x[[location_col]], cqc_location,
-                         clean_names = clean_names
+        clean_names = clean_names
       )
-
     }
-
   } else {
     loc_list <- lapply(x[[location_col]], cqc_location,
       clean_names = clean_names

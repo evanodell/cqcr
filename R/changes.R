@@ -25,7 +25,7 @@
 #'   end_date = "2019-03-12"
 #' )
 #' }
-
+#'
 cqc_changes <- function(organisation_type = c("provider", "location"),
                         start_date = "2000-01-01", end_date = Sys.Date(),
                         verbose = TRUE, clean_names = TRUE) {
