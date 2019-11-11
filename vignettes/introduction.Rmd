@@ -8,18 +8,19 @@ vignette: >
 ---
 
 ```{r knitr-setup, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
+knitr::opts_chunk$set( 
+  collapse = TRUE,echo = TRUE,
   comment = "#>"
 )
 ```
 
-```{r setup}
+```{r setup, echo=TRUE}
 library(cqcr)
 library(purrr)
 library(dplyr)
 library(ggplot2)
 library(forcats)
+library(tidyr)
 ```
 
 

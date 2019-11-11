@@ -42,5 +42,6 @@ Suggests:
     htmltools,
     pbapply,
     readr,
-    forcats
+    forcats,
+    tidyr
 VignetteBuilder: knitr
