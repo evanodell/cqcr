@@ -17,13 +17,11 @@ navbar:
       href: news/index.html
     - text: "Reference"
       href: reference/index.html
-      menu:
     - text: "Introduction"
       href: articles/introduction.html
-    - text: "Packages"
-      menu:
-        - text: "Documentation Home"
-          href: http://docs.evanodell.com
+    - text: "Documentation Home"
+      href: https://docs.evanodell.com
+
 
   right:
     - icon: fa-github fa-lg

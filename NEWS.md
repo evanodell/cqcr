@@ -1,5 +1,9 @@
 
-# cqcr 0.1.2.9000
+# 0.1.3.9000
+
+* Page size options
+
+# cqcr 0.1.3
 
 * New `cqc_location_details` function.
 

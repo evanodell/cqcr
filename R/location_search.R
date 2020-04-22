@@ -53,6 +53,8 @@
 #' more than 1,000 records. Defaults to `TRUE`.
 #' @param clean_names If `TRUE`, converts a column names to snake_case.
 #' Defaults to `TRUE`.
+#' @param page_size The number of records to return per page of the API. Use
+#' smaller values for slower connections. Defaults to 500.
 #'
 #' @return A tibble with the location ID, name and postcode of all locations
 #' meeting the given parameters.
@@ -75,7 +77,8 @@ cqc_locations_search <- function(care_home = NULL, onspd_ccg_code = NULL,
                                  non_primary_inspection_category_name = NULL,
                                  overall_rating = NULL, region = NULL,
                                  regulated_activity = NULL, report_type = NULL,
-                                 verbose = TRUE, clean_names = TRUE) {
+                                 verbose = TRUE, clean_names = TRUE,
+                                 page_size = 500) {
   if (is.null(care_home)) {
     ch_query <- ""
   } else if (care_home == TRUE) {
@@ -85,6 +88,10 @@ cqc_locations_search <- function(care_home = NULL, onspd_ccg_code = NULL,
   } else {
     ch_query <- ""
   }
+
+   if (!is.numeric(page_size)) {
+     page_size <- 500
+   }
 
   dots <- rlang::list2(
     onspd_ccg_code = onspd_ccg_code,
@@ -111,7 +118,7 @@ cqc_locations_search <- function(care_home = NULL, onspd_ccg_code = NULL,
 
   query <- gsub("locations?&", "locations?", query, fixed = TRUE)
 
-  df <- cqc_get_data(query, verbose, type = "locations", clean_names)
+  df <- cqc_get_data(query, verbose, type = "locations", clean_names, page_size)
 
   df
 }
