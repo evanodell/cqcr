@@ -4,14 +4,21 @@
 \alias{cqc_providers}
 \title{CQC Providers}
 \usage{
-cqc_providers(constituency = NULL, local_authority = NULL,
+cqc_providers(
+  constituency = NULL,
+  local_authority = NULL,
   inspection_directorate = NULL,
   non_primary_inspection_category_code = NULL,
   non_primary_inspection_category_name = NULL,
   primary_inspection_category_code = NULL,
-  primary_inspection_category_name = NULL, overall_rating = NULL,
-  region = NULL, regulated_activity = NULL, report_type = NULL,
-  verbose = TRUE, clean_names = TRUE)
+  primary_inspection_category_name = NULL,
+  overall_rating = NULL,
+  region = NULL,
+  regulated_activity = NULL,
+  report_type = NULL,
+  verbose = TRUE,
+  clean_names = TRUE
+)
 }
 \arguments{
 \item{constituency}{Location is in a given parliamentary constituency}

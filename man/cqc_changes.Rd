@@ -4,9 +4,13 @@
 \alias{cqc_changes}
 \title{Changes}
 \usage{
-cqc_changes(organisation_type = c("provider", "location"),
-  start_date = "2000-01-01", end_date = Sys.Date(), verbose = TRUE,
-  clean_names = TRUE)
+cqc_changes(
+  organisation_type = c("provider", "location"),
+  start_date = "2000-01-01",
+  end_date = Sys.Date(),
+  verbose = TRUE,
+  clean_names = TRUE
+)
 }
 \arguments{
 \item{organisation_type}{One of "provider" or "location".}

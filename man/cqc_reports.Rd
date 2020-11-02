@@ -4,9 +4,15 @@
 \alias{cqc_reports}
 \title{Inspection reports}
 \usage{
-cqc_reports(inspection_report_link_id, related_document_type = NULL,
-  plain_text = TRUE, attempt_pdf = FALSE, directory = NULL,
-  file_name = NULL, verbose = TRUE)
+cqc_reports(
+  inspection_report_link_id,
+  related_document_type = NULL,
+  plain_text = TRUE,
+  attempt_pdf = FALSE,
+  directory = NULL,
+  file_name = NULL,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{inspection_report_link_id}{The ID of the report to return.}
@@ -14,7 +20,7 @@ cqc_reports(inspection_report_link_id, related_document_type = NULL,
 \item{related_document_type}{An optional qualifier to retrieve a document
 related to the main report. This parameter is the Related Document Type
 found from the relatedDocuments response object. e.g.
-"Use%20of%20Resources". When this parameter is absent, the main report
+"Use\%20of\%20Resources". When this parameter is absent, the main report
 for the inspection is returned.}
 
 \item{plain_text}{If \code{TRUE}, returns plain text of report. Otherwise returns

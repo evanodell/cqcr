@@ -4,16 +4,28 @@
 \alias{cqc_locations_search}
 \title{Location Queries}
 \usage{
-cqc_locations_search(care_home = NULL, onspd_ccg_code = NULL,
-  onspd_ccg_name = NULL, ods_ccg_code = NULL, ods_ccg_name = NULL,
-  gac_service_type_description = NULL, constituency = NULL,
-  local_authority = NULL, inspection_directorate = NULL,
+cqc_locations_search(
+  care_home = NULL,
+  onspd_ccg_code = NULL,
+  onspd_ccg_name = NULL,
+  ods_ccg_code = NULL,
+  ods_ccg_name = NULL,
+  gac_service_type_description = NULL,
+  constituency = NULL,
+  local_authority = NULL,
+  inspection_directorate = NULL,
   primary_inspection_category_code = NULL,
   primary_inspection_category_name = NULL,
   non_primary_inspection_category_code = NULL,
-  non_primary_inspection_category_name = NULL, overall_rating = NULL,
-  region = NULL, regulated_activity = NULL, report_type = NULL,
-  verbose = TRUE, clean_names = TRUE)
+  non_primary_inspection_category_name = NULL,
+  overall_rating = NULL,
+  region = NULL,
+  regulated_activity = NULL,
+  report_type = NULL,
+  verbose = TRUE,
+  clean_names = TRUE,
+  page_size = 500
+)
 }
 \arguments{
 \item{care_home}{If \code{TRUE}, only returns care homes. If \code{FALSE}, returns
@@ -76,6 +88,9 @@ more than 1,000 records. Defaults to \code{TRUE}.}
 
 \item{clean_names}{If \code{TRUE}, converts a column names to snake_case.
 Defaults to \code{TRUE}.}
+
+\item{page_size}{The number of records to return per page of the API. Use
+smaller values for slower connections. Defaults to 500.}
 }
 \value{
 A tibble with the location ID, name and postcode of all locations

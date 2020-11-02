@@ -65,9 +65,7 @@ test_that("big location works", {
   expect_length(loc9, 3)
   expect_gte(nrow(loc9), 3000)
 
-
   # Location details test ---------------------------------------------------
-
   loc4_details <- cqc_location_details(loc4)
 
   expect_true(is.list(loc4_details))

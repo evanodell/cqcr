@@ -1,6 +1,6 @@
 
 ## Utility retrieval function
-cqc_get_data <- function(query, verbose, type, clean_names, page_size) {
+cqc_get_data <- function(query, verbose, type, clean_names, page_size = 500) {
   if (substr(query, (nchar(query) + 1) - 1, nchar(query)) %in% c("?", "&")) {
     pages_query <- paste0("perPage=", page_size, "&page=")
   } else {
