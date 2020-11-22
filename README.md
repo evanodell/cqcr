@@ -11,8 +11,8 @@ v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/li
 [![GitHub
 tag](https://img.shields.io/github/tag/evanodell/cqcr.svg)](https://github.com/evanodell/cqcr)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/cqcr)](https://dgrtwo.shinyapps.io/cranview/)
-[![Travis build
-status](https://travis-ci.org/evanodell/cqcr.svg?branch=master)](https://travis-ci.org/evanodell/cqcr)
+[![R build
+status](https://github.com/evanodell/cqcr/workflows/R-CMD-check/badge.svg)](https://github.com/evanodell/cqcr/actions)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/evanodell/cqcr?branch=master&svg=true)](https://ci.appveyor.com/project/evanodell/cqcr)
 [![Codecov test
@@ -109,21 +109,19 @@ ggplot(care_home_df_unnest,
 # Citing cqcr
 
 Odell E (2019). *cqcr: Access ‘Care Quality Commission’ Data*. doi:
-10.5281/zenodo.3452020, R package version 0.1.3, URL:
+10.5281/zenodo.3452020, R package version 0.1.3.9000, URL:
 <https://github.com/evanodell/cqcr>.
 
 A BibTeX entry for LaTeX users is
 
-``` 
-  @Manual{,
-    title = {{cqcr}: Access 'Care Quality Commission' Data},
-    author = {Evan Odell},
-    doi = {10.5281/zenodo.3452020},
-    year = {2019},
-    note = {R package version 0.1.3},
-    url = {https://github.com/evanodell/cqcr},
-  }
-```
+      @Manual{,
+        title = {{cqcr}: Access 'Care Quality Commission' Data},
+        author = {Evan Odell},
+        doi = {10.5281/zenodo.3452020},
+        year = {2019},
+        note = {R package version 0.1.3.9000},
+        url = {https://github.com/evanodell/cqcr},
+      }
 
 # Notes
 
