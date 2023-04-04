@@ -21,7 +21,7 @@ cqc_get_data <- function(query, verbose, type, clean_names, page_size = 500) {
       verbose, type
     )
   } else {
-    df <- dplyr::bind_rows(cont[type])
+    df <- cont[type]
   }
 
   df <- dplyr::as_tibble(df)

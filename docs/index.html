@@ -22,15 +22,11 @@
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-90706059-1"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-90706059-1');
-</script>
+<![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -43,14 +39,14 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">cqcr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.3.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="http://docs.evanodell.com">Docs Home</a>
+  <a href="http://docs.evanodell.com" class="external-link">Docs Home</a>
 </li>
 <li>
   <a href="news/index.html">News</a>
@@ -62,18 +58,18 @@
   <a href="articles/introduction.html">Introduction</a>
 </li>
 <li>
-  <a href="https://docs.evanodell.com">Documentation Home</a>
+  <a href="https://docs.evanodell.com" class="external-link">Documentation Home</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/EvanOdell/cqcr">
+  <a href="https://github.com/EvanOdell/cqcr" class="external-link">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="https://evanodell.com">
+  <a href="https://evanodell.com" class="external-link">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -91,24 +87,31 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-<div id="cqcr" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#cqcr" class="anchor"></a>cqcr</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="cqcr">cqcr<a class="anchor" aria-label="anchor" href="#cqcr"></a>
+</h1></div>
 <!-- badges: start -->
 
-<p>Get data from the Care Quality Commission <a href="https://anypoint.mulesoft.com/exchange/portals/care-quality-commission-5/4d36bd23-127d-4acf-8903-ba292ea615d4/cqc-syndication-1/">API</a></p>
-<p>Access data from the ‘Care Quality Commission’, the health and adult social care regulator for England. The ‘Care Quality Commission’ operates an <a href="https://www.cqc.org.uk/about-us/transparency/using-cqc-data#api">API</a>, with data available under the Open Government License. Data includes information on service providers, locations such as hospitals, care homes and medical clinics, and ratings and inspection reports.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<p>The package is available on <a href="https://cran.r-project.org/package=cqcr">CRAN</a>, and can be installed with:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">"cqcr"</span>)</span></code></pre></div>
+<p>Get data from the Care Quality Commission <a href="https://anypoint.mulesoft.com/exchange/portals/care-quality-commission-5/4d36bd23-127d-4acf-8903-ba292ea615d4/cqc-syndication-1/" class="external-link">API</a></p>
+<p>Access data from the ‘Care Quality Commission’, the health and adult
+social care regulator for England. The ‘Care Quality Commission’
+operates an <a href="https://www.cqc.org.uk/about-us/transparency/using-cqc-data#api" class="external-link">API</a>,
+with data available under the Open Government License. Data includes
+information on service providers, locations such as hospitals, care
+homes and medical clinics, and ratings and inspection reports.</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>The package is available on <a href="https://cran.r-project.org/package=cqcr" class="external-link">CRAN</a>, and can be
+installed with:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"cqcr"</span>)</span></code></pre></div>
 <p>To install the development version from GitHub use:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">#install.packages("devtools")</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"evanodell/cqcr"</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">cqcr</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">purrr</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>)
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("devtools")</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"evanodell/cqcr"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/evanodell/cqcr" class="external-link">cqcr</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://purrr.tidyverse.org" class="external-link">purrr</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Attaching package: 'dplyr'</span>
 <span class="co">#&gt; The following objects are masked from 'package:stats':</span>
@@ -117,134 +120,145 @@
 <span class="co">#&gt; The following objects are masked from 'package:base':</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;     intersect, setdiff, setequal, union</span>
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggplot2</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">forcats</span>)</pre></div>
-<div class="sourceCode" id="cb4"><pre class="r"><span class="no">loc1</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/cqc_locations_search.html">cqc_locations_search</a></span>(<span class="kw">care_home</span> <span class="kw">=</span> <span class="fl">TRUE</span>,
-                             <span class="kw">local_authority</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Waltham Forest"</span>,
-                                                 <span class="st">"Hackney"</span>, <span class="st">"Tower Hamlets"</span>))
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://forcats.tidyverse.org" class="external-link">forcats</a></span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">loc1</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/cqc_locations_search.html">cqc_locations_search</a></span><span class="op">(</span>care_home <span class="op">=</span> <span class="cn">TRUE</span>, 
+                             local_authority <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Waltham Forest"</span>,
+                                                 <span class="st">"Hackney"</span>, <span class="st">"Tower Hamlets"</span><span class="op">)</span><span class="op">)</span>
 
 
-<span class="no">care_home_details</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/cqc_location_details.html">cqc_location_details</a></span>(<span class="no">loc1</span>)
+<span class="va">care_home_details</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/cqc_location_details.html">cqc_location_details</a></span><span class="op">(</span><span class="va">loc1</span><span class="op">)</span>
 
-<span class="no">care_home_df</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span>(<span class="no">care_home_details</span>, <span class="no">`[`</span>,
-                        <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"location_id"</span>, <span class="st">"name"</span>, <span class="st">"number_of_beds"</span>,
-                          <span class="st">"onspd_longitude"</span>, <span class="st">"onspd_latitude"</span>))
+<span class="va">care_home_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html" class="external-link">map_dfr</a></span><span class="op">(</span><span class="va">care_home_details</span>, <span class="va">`[`</span>,
+                        <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"location_id"</span>, <span class="st">"name"</span>, <span class="st">"number_of_beds"</span>, 
+                          <span class="st">"onspd_longitude"</span>, <span class="st">"onspd_latitude"</span><span class="op">)</span><span class="op">)</span>
 
-<span class="no">care_home_df</span> <span class="kw">&lt;-</span> <span class="no">care_home_df</span> <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(<span class="kw">rating</span> <span class="kw">=</span> <span class="no">care_home_details</span> <span class="kw">%&gt;%</span>
-           <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"current_ratings"</span>, <span class="st">"overall"</span>, <span class="st">"rating"</span>)) <span class="kw">%&gt;%</span>
-           <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span>(),
-         <span class="kw">rating</span> <span class="kw">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/recode.html">recode</a></span>(<span class="no">rating</span>, <span class="st">"NULL"</span> <span class="kw">=</span> <span class="st">"No published rating"</span>),
-         <span class="kw">rating</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">rating</span>, <span class="kw">levels</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Outstanding"</span>, <span class="st">"Good"</span>,
-                                            <span class="st">"Requires improvement"</span>,
+<span class="va">care_home_df</span> <span class="op">&lt;-</span> <span class="va">care_home_df</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>rating <span class="op">=</span> <span class="va">care_home_details</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
+           <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html" class="external-link">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"current_ratings"</span>, <span class="st">"overall"</span>, <span class="st">"rating"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
+           <span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">as.character</a></span><span class="op">(</span><span class="op">)</span>,
+         rating <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/recode.html" class="external-link">recode</a></span><span class="op">(</span><span class="va">rating</span>, <span class="st">"NULL"</span> <span class="op">=</span> <span class="st">"No published rating"</span><span class="op">)</span>,
+         rating <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">rating</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Outstanding"</span>, <span class="st">"Good"</span>,
+                                            <span class="st">"Requires improvement"</span>, 
                                             <span class="st">"Inadequate"</span>,
-                                            <span class="st">"No published rating"</span>)),
-         <span class="kw">report_date</span> <span class="kw">=</span> <span class="no">care_home_details</span> <span class="kw">%&gt;%</span>
-           <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"current_ratings"</span>, <span class="st">"reportDate"</span>)) <span class="kw">%&gt;%</span>
-           <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span>(),
-         <span class="kw">report_date</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span>(<span class="no">report_date</span> <span class="kw">==</span> <span class="st">"NULL"</span>, <span class="fl">NA</span>, <span class="no">report_date</span>),
-         <span class="kw">specialisms</span> <span class="kw">=</span> <span class="no">care_home_details</span> <span class="kw">%&gt;%</span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"specialisms"</span>, <span class="st">"name"</span>)))</pre></div>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="no">care_home_df_unnest</span> <span class="kw">&lt;-</span> <span class="kw pkg">tidyr</span><span class="kw ns">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/nest.html">unnest</a></span>(<span class="no">care_home_df</span>, <span class="kw">cols</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="no">specialisms</span>)) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(<span class="kw">specialisms</span> <span class="kw">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_inorder.html">fct_infreq</a></span>(<span class="no">specialisms</span>))
+                                            <span class="st">"No published rating"</span><span class="op">)</span><span class="op">)</span>,
+         report_date <span class="op">=</span> <span class="va">care_home_details</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
+           <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html" class="external-link">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"current_ratings"</span>, <span class="st">"reportDate"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
+           <span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">as.character</a></span><span class="op">(</span><span class="op">)</span>,
+         report_date <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">report_date</span> <span class="op">==</span> <span class="st">"NULL"</span>, <span class="cn">NA</span>, <span class="va">report_date</span><span class="op">)</span>,
+         specialisms <span class="op">=</span> <span class="va">care_home_details</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html" class="external-link">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"specialisms"</span>, <span class="st">"name"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">care_home_df_unnest</span> <span class="op">&lt;-</span> <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/nest.html" class="external-link">unnest</a></span><span class="op">(</span><span class="va">care_home_df</span>, cols <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">specialisms</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>specialisms <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_inorder.html" class="external-link">fct_infreq</a></span><span class="op">(</span><span class="va">specialisms</span><span class="op">)</span><span class="op">)</span>
 
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html">theme_set</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span>())
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html" class="external-link">theme_set</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
 
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">care_home_df_unnest</span>,
-                        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">specialisms</span>, <span class="kw">fill</span> <span class="kw">=</span> <span class="no">rating</span>)) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span>() +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_discrete.html">scale_x_discrete</a></span>(<span class="kw">labels</span> <span class="kw">=</span> <span class="kw pkg">scales</span><span class="kw ns">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/label_wrap.html">wrap_format</a></span>(<span class="fl">33</span>)) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_fill_viridis_d</a></span>(<span class="kw">name</span><span class="kw">=</span><span class="st">""</span>, <span class="kw">option</span> <span class="kw">=</span> <span class="st">"A"</span>, <span class="kw">end</span> <span class="kw">=</span> <span class="fl">0.95</span>) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="st">"Specialism(s)"</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="st">"Number of Care Homes"</span>) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span>(<span class="kw">legend.position</span> <span class="kw">=</span> <span class="st">"bottom"</span>,
-        <span class="kw">axis.text.x</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span>(<span class="kw">size</span> <span class="kw">=</span> <span class="fl">8</span>, <span class="kw">angle</span> <span class="kw">=</span> <span class="fl">60</span>, <span class="kw">hjust</span> <span class="kw">=</span> <span class="fl">1</span>))</pre></div>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">care_home_df_unnest</span>,
+                        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">specialisms</span>, fill <span class="op">=</span> <span class="va">rating</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_discrete.html" class="external-link">scale_x_discrete</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/label_wrap.html" class="external-link">wrap_format</a></span><span class="op">(</span><span class="fl">33</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html" class="external-link">scale_fill_viridis_d</a></span><span class="op">(</span>name<span class="op">=</span><span class="st">""</span>, option <span class="op">=</span> <span class="st">"A"</span>, end <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Specialism(s)"</span>, y <span class="op">=</span> <span class="st">"Number of Care Homes"</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span>,
+        axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">8</span>, angle <span class="op">=</span> <span class="fl">60</span>, hjust <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-plot-1.png" width="100%"></p>
 </div>
 </div>
-<div id="citing-cqcr" class="section level1">
-<h1 class="hasAnchor">
-<a href="#citing-cqcr" class="anchor"></a>Citing cqcr</h1>
-<p>Odell E (2019). <em>cqcr: Access ‘Care Quality Commission’ Data</em>. doi: 10.5281/zenodo.3452020, R package version 0.1.3, URL: <a href="https://github.com/evanodell/cqcr" class="uri">https://github.com/evanodell/cqcr</a>.</p>
+<div class="section level1">
+<h1 id="citing-cqcr">Citing cqcr<a class="anchor" aria-label="anchor" href="#citing-cqcr"></a>
+</h1>
+<p>Odell E (2019). <em>cqcr: Access ‘Care Quality Commission’ Data</em>.
+doi: 10.5281/zenodo.3452020, R package version 0.1.3.9000, URL: <a href="https://github.com/evanodell/cqcr" class="external-link uri">https://github.com/evanodell/cqcr</a>.</p>
 <p>A BibTeX entry for LaTeX users is</p>
-<pre><code>  @Manual{,
-    title = {{cqcr}: Access 'Care Quality Commission' Data},
-    author = {Evan Odell},
-    doi = {10.5281/zenodo.3452020},
-    year = {2019},
-    note = {R package version 0.1.3},
-    url = {https://github.com/evanodell/cqcr},
-  }</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  <span class="sc">@</span>Manual{,</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    title <span class="ot">=</span> {{cqcr}<span class="sc">:</span> Access <span class="st">'Care Quality Commission'</span> Data},</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    author <span class="ot">=</span> {Evan Odell},</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    doi <span class="ot">=</span> {<span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.3452020</span>},</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    year <span class="ot">=</span> {<span class="dv">2019</span>},</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    note <span class="ot">=</span> {R package version <span class="dv">0</span>.<span class="dv">1</span>.<span class="fl">3.9000</span>},</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    url <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>evanodell<span class="sc">/</span>cqcr},</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
 </div>
-<div id="notes" class="section level1">
-<h1 class="hasAnchor">
-<a href="#notes" class="anchor"></a>Notes</h1>
-<p>This package is not affiliated with or supported by the Care Quality Commission.</p>
-<p>Please note that the ‘cqcr’ project is released with a <a href="https://github.com/evanodell/cqcr/blob/master/CODE_OF_CONDUCT.md">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+<div class="section level1">
+<h1 id="notes">Notes<a class="anchor" aria-label="anchor" href="#notes"></a>
+</h1>
+<p>This package is not affiliated with or supported by the Care Quality
+Commission.</p>
+<p>Please note that the ‘cqcr’ project is released with a <a href="https://github.com/evanodell/cqcr/blob/master/CODE_OF_CONDUCT.md" class="external-link">Contributor
+Code of Conduct</a>. By contributing to this project, you agree to abide
+by its terms.</p>
 </div>
 
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=cqcr">https://​cloud.r-project.org/​package=cqcr</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/evanodell/cqcr/">https://​github.com/​evanodell/​cqcr/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/evanodell/cqcr/issues">https://​github.com/​evanodell/​cqcr/​issues</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=cqcr" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/evanodell/cqcr/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/evanodell/cqcr/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></small></li>
+<li><small><a href="https://www.r-project.org/Licenses/GPL-3" class="external-link">GPL-3</a></small></li>
 </ul>
 </div>
+
 <div class="community">
-<h2>Community</h2>
+<h2 data-toc-skip>Community</h2>
 <ul class="list-unstyled">
 <li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
 </ul>
 </div>
+
 <div class="citation">
-<h2>Citation</h2>
+<h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="authors.html">Citing cqcr</a></li>
-</ul>
-</div>
-<div class="developers">
-<h2>Developers</h2>
-<ul class="list-unstyled">
-<li>
-<a href="https://evanodell.com">Evan Odell</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0003-1845-808X" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="authors.html#citation">Citing cqcr</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a></li>
-<li><a href="https://cran.r-project.org/package=cqcr"><img src="https://www.r-pkg.org/badges/version/cqcr" alt="CRAN_Status_Badge"></a></li>
-<li><a href="https://github.com/evanodell/cqcr"><img src="https://img.shields.io/github/tag/evanodell/cqcr.svg" alt="GitHub tag"></a></li>
-<li><a href="https://dgrtwo.shinyapps.io/cranview/"><img src="https://cranlogs.r-pkg.org/badges/grand-total/cqcr"></a></li>
-<li><a href="https://travis-ci.org/evanodell/cqcr"><img src="https://travis-ci.org/evanodell/cqcr.svg?branch=master" alt="Travis build status"></a></li>
-<li><a href="https://ci.appveyor.com/project/evanodell/cqcr"><img src="https://ci.appveyor.com/api/projects/status/github/evanodell/cqcr?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
-<li><a href="https://codecov.io/gh/evanodell/cqcr?branch=master"><img src="https://codecov.io/gh/evanodell/cqcr/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
-<li><a href="https://zenodo.org/badge/latestdoi/204009825"><img src="https://zenodo.org/badge/204009825.svg" alt="DOI"></a></li>
+<li>
+<a href="https://evanodell.com" class="external-link">Evan Odell</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0003-1845-808X" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://www.gnu.org/licenses/gpl-3.0" class="external-link"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a></li>
+<li><a href="https://cran.r-project.org/package=cqcr" class="external-link"><img src="https://www.r-pkg.org/badges/version/cqcr" alt="CRAN_Status_Badge"></a></li>
+<li><a href="https://github.com/evanodell/cqcr" class="external-link"><img src="https://img.shields.io/github/tag/evanodell/cqcr.svg" alt="GitHub tag"></a></li>
+<li><a href="https://dgrtwo.shinyapps.io/cranview/" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/grand-total/cqcr"></a></li>
+<li><a href="https://github.com/evanodell/cqcr/actions" class="external-link"><img src="https://github.com/evanodell/cqcr/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://ci.appveyor.com/project/evanodell/cqcr" class="external-link"><img src="https://ci.appveyor.com/api/projects/status/github/evanodell/cqcr?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
+<li><a href="https://codecov.io/gh/evanodell/cqcr?branch=master" class="external-link"><img src="https://codecov.io/gh/evanodell/cqcr/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://zenodo.org/badge/latestdoi/204009825" class="external-link"><img src="https://zenodo.org/badge/204009825.svg" alt="DOI"></a></li>
+</ul>
 </div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://evanodell.com">Evan Odell</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://evanodell.com" class="external-link">Evan Odell</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
+2.0.1.</p>
 </div>
 
       </footer>
@@ -252,6 +266,8 @@
 
   
 
+
+  
 
   </body>
 </html>

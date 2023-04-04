@@ -2,7 +2,7 @@
 cqc_multi_page_get_data <- function(cont, query, pages_query, verbose, type) {
   df_list <- list()
 
-  df_list[[1]] <- dplyr::bind_rows(cont[[type]])
+  df_list[[1]] <- data.frame(cont[[type]])
 
   seq_list <- seq(from = 2, to = cont$totalPages)
 
@@ -16,7 +16,7 @@ cqc_multi_page_get_data <- function(cont, query, pages_query, verbose, type) {
 
     cont <- cqc_query_construction(query2)
 
-    df_list[[seq_list[[i]]]] <- dplyr::bind_rows(cont[[type]])
+    df_list[[seq_list[[i]]]] <- dplyr::bind_rows(data.frame(cont[[type]]))
   }
 
   df <- dplyr::bind_rows(df_list)
