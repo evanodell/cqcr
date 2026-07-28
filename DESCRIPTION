@@ -1,6 +1,6 @@
 Package: cqcr
 Title: Access 'Care Quality Commission' Data
-Version: 0.1.4.9000
+Version: 0.1.5.9000
 Authors@R: 
     c(person(given = "Evan",
            family = "Odell",

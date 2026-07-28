@@ -17,7 +17,7 @@
 #' @importFrom jsonlite fromJSON
 #' @importFrom anytime iso8601 anytime
 #' @importFrom snakecase to_lower_camel_case to_snake_case
-#' @importFrom rlang list2
+#' @importFrom rlang list2 abort
 #' @name cqcr
 #' @aliases NULL cqcr-package
 NULL

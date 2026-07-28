@@ -1,6 +1,19 @@
 ## Query construction function to reduce code-reuse
 
-cqc_query_construction <- function(query) {
+#' Perform a CQC API GET request, retrying transient failures
+#'
+#' Retries on non-200 responses (the CQC API has frequent transient blips)
+#' with a short exponential backoff. If all attempts fail, raises a
+#' structured `cqcr_api_error` condition carrying the HTTP status, the
+#' request URL, and the response body, so callers can `tryCatch()` on it
+#' and decide how to proceed (e.g. skip one item and keep going) instead of
+#' receiving a malformed, mismatched-shape object.
+#'
+#' @param query the query string to append to the API base URL
+#' @param max_tries number of attempts before giving up (default 3)
+#' @param backoff_seconds base backoff in seconds between attempts,
+#'   doubled after each failure (default 1)
+cqc_query_construction <- function(query, max_tries = 3, backoff_seconds = 1) {
   subscription_key <- getOption("cqc.subscription.key")
 
   if (is.null(subscription_key)) {
@@ -13,40 +26,33 @@ cqc_query_construction <- function(query) {
     baseurl, query
   )
 
+  last_status <- NA
+  last_body <- NA
 
+  for (attempt in seq_len(max_tries)) {
+    x <- httr::GET(query2, add_headers(`Ocp-Apim-Subscription-Key` = subscription_key))
 
-  # Make the GET request
-  x <- httr::GET(query2, add_headers(`Ocp-Apim-Subscription-Key` = subscription_key))
-
-
-  if (httr::status_code(x) != "200") {
-      # Log the error message and URL or any other useful information
-      error_message <- paste("Request returned error code:", httr::status_code(x))
-      request_url <- query2  # or use x$url if available
-
-      # If the cqcr_errors data frame does not exist, create it
-      if (!exists("cqcr_errors")) {
-        cqcr_errors <- data.frame(
-          error_message = character(),
-          url = character(),
-          stringsAsFactors = FALSE
-        )
-      }
-
-      # Append the error message and URL to the cqcr_errors data frame
-      cqcr_errors <- rbind(cqcr_errors, data.frame(
-        error_message = error_message,
-        url = request_url,
-        stringsAsFactors = FALSE
-      ))
-
-    }
-    else {
-      # Proceed with fromJSON only if the request was successful
+    if (httr::status_code(x) == 200) {
       suppressMessages(cont <- jsonlite::fromJSON(httr::content(x, "text")))
-
-      # Return the parsed content
-      cont
+      return(cont)
     }
-}
 
+    last_status <- httr::status_code(x)
+    last_body <- httr::content(x, "text")
+
+    if (attempt < max_tries) {
+      Sys.sleep(backoff_seconds * (2 ^ (attempt - 1)))
+    }
+  }
+
+  rlang::abort(
+    message = paste0(
+      "CQC API request failed after ", max_tries,
+      " attempt(s) with status ", last_status, ": ", query2
+    ),
+    class = "cqcr_api_error",
+    status = last_status,
+    url = query2,
+    body = last_body
+  )
+}
