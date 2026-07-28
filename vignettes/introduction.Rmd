@@ -26,7 +26,7 @@ library(tidyr)
 
 ## CQC Partner Codes
 
-The Care Quality Comission does not require registration or the use of keys to access the API, but they do want users to attach a partner code to their requests. If you haven't been provided a code by the CQC, you should use a name or acronym that identifies you or your organisation. You can set the code for each session with `cqc_partner_code()`, or store it in an environmental variable named `CQC_PARTNER_CODE`.
+The Care Quality Commission requires registration and the use of keys to access the API, and these can be obtained from their website. You can set the code for each session with `cqc_subscription_key()`, or store it in an environment variable named `CQC_SUBSCRIPTION_KEY`.
 
 ## Using `cqcr`
 

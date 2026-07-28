@@ -37,6 +37,15 @@ cqc_reports <- function(inspection_report_link_id,
                         related_document_type = NULL,
                         plain_text = TRUE, attempt_pdf = FALSE,
                         directory = NULL, file_name = NULL, verbose = TRUE) {
+
+  # Retrieve the API key from the R options
+  subscription_key <- getOption("cqc.subscription.key")
+
+  # Check if the API key is set
+  if (is.null(subscription_key)) {
+    stop("API key not set. Please run cqc_subscription_key() first.", call. = FALSE)
+  }
+
   rel_doc_query <- if (is.null(related_document_type)) {
     ""
   } else {
@@ -51,33 +60,33 @@ cqc_reports <- function(inspection_report_link_id,
   if (plain_text) {
     x <- httr::VERB(
       verb = "GET", url = query,
-      httr::add_headers(Accept = "text/plain")
+      httr::add_headers(Accept = "text/plain", `Ocp-Apim-Subscription-Key` = subscription_key)
     )
 
     if (httr::http_type(x) == "text/plain") {
       cont <- httr::content(x)
-
       cont
     } else if (attempt_pdf) {
-      download.file(query,
-        paste0(directory, inspection_report_link_id, ".pdf"),
-        mode = "wb"
+      x <- httr::VERB(
+        verb = "GET", url = query,
+        httr::add_headers(`Ocp-Apim-Subscription-Key` = subscription_key)
       )
+      writeBin(httr::content(x, "raw"), paste0(directory, inspection_report_link_id, ".pdf"))
     } else {
       code_result <- httr::status_code(x)
-
       if (code_result == 200) {
         stop(paste("Error: Report is available, but not in chosen format"),
-          call. = FALSE
+             call. = FALSE
         )
       } else {
         stop(paste("Error code:", httr::status_code(x)), call. = FALSE)
       }
     }
   } else {
-    download.file(query,
-      paste0(directory, inspection_report_link_id, ".pdf"),
-      mode = "wb"
+    x <- httr::VERB(
+      verb = "GET", url = query,
+      httr::add_headers(`Ocp-Apim-Subscription-Key` = subscription_key)
     )
+    writeBin(httr::content(x, "raw"), paste0(directory, inspection_report_link_id, ".pdf"))
   }
 }

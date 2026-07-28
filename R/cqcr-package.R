@@ -17,21 +17,20 @@
 #' @importFrom jsonlite fromJSON
 #' @importFrom anytime iso8601 anytime
 #' @importFrom snakecase to_lower_camel_case to_snake_case
-#' @importFrom rlang list2
+#' @importFrom rlang list2 abort
 #' @name cqcr
 #' @aliases NULL cqcr-package
 NULL
 
 # Checking for API key on package load
 .onLoad <- function(libname, pkgname) {
-  if (is.null(getOption("cqc.partner.code"))) {
-    key <- Sys.getenv("CQC_PARTNER_CODE")
+  if (is.null(getOption("cqc.subscription.key"))) {
+    key <- Sys.getenv("CQC_SUBSCRIPTION_KEY")
     if (key != "") {
-      if (substr(key, 1, 13) != "&partnerCode=") {
-        key <- paste0("&partnerCode=", key)
-      }
-      options("cqc.partner.code" = key)
+      key <- paste0(key)
     }
+    options("cqc.subscription.key" = key)
   }
-  invisible()
 }
+invisible()
+

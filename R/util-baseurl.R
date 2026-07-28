@@ -1,1 +1,1 @@
-baseurl <- "https://api.cqc.org.uk/public/v1/"
+baseurl <- "https://api.service.cqc.org.uk/public/v1/"
